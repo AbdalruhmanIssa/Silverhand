@@ -1,0 +1,6 @@
+@Silverhand.PL_HostAddress = http://localhost:5189
+
+GET {{Silverhand.PL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

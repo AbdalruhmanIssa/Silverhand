@@ -1,0 +1,14 @@
+C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\bin\Debug\net9.0\Silverhand.DAL.deps.json
+C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\bin\Debug\net9.0\Silverhand.DAL.runtimeconfig.json
+C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\bin\Debug\net9.0\Silverhand.DAL.dll
+C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\bin\Debug\net9.0\Silverhand.DAL.pdb
+C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\obj\Debug\net9.0\Silverhand.DAL.csproj.AssemblyReference.cache
+C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\obj\Debug\net9.0\Silverhand.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\obj\Debug\net9.0\Silverhand.DAL.AssemblyInfoInputs.cache
+C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\obj\Debug\net9.0\Silverhand.DAL.AssemblyInfo.cs
+C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\obj\Debug\net9.0\Silverhand.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\obj\Debug\net9.0\Silverhand.DAL.dll
+C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\obj\Debug\net9.0\refint\Silverhand.DAL.dll
+C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\obj\Debug\net9.0\Silverhand.DAL.pdb
+C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\obj\Debug\net9.0\Silverhand.DAL.genruntimeconfig.cache
+C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\obj\Debug\net9.0\ref\Silverhand.DAL.dll
