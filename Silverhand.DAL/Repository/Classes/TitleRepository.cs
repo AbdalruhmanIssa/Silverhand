@@ -1,6 +1,7 @@
 ﻿using Silverhand.DAL.Data;
+using Silverhand.DAL.Models;
 using Silverhand.DAL.Repository.Repositories;
-using StreamingService.DAL.Models;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;

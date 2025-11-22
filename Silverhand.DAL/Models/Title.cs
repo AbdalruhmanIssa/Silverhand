@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StreamingService.DAL.Models
+namespace Silverhand.DAL.Models
 {
     public class Title : Base
     {
@@ -23,7 +23,7 @@ namespace StreamingService.DAL.Models
         public string? BackdropUrl { get; set; }
 
         // Navigation for later
-      //  public ICollection<Episode>? Episodes { get; set; }
+        public ICollection<Episode>? Episodes { get; set; }
     }
 
     public enum TitleType

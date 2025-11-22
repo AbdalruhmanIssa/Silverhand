@@ -12,3 +12,4 @@ C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\obj\Debug\n
 C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\obj\Debug\net9.0\Silverhand.DAL.pdb
 C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\obj\Debug\net9.0\Silverhand.DAL.genruntimeconfig.cache
 C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\obj\Debug\net9.0\ref\Silverhand.DAL.dll
+C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.DAL\obj\Debug\net9.0\Silverhand.DAL.sourcelink.json

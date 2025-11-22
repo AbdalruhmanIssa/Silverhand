@@ -20,7 +20,9 @@ options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"
             builder.Services.AddScoped<ITitleRepository, TitleRepository>();
             builder.Services.AddScoped<ITitlesService, TitlesService>();
             builder.Services.AddScoped<IFileService, FileService>();
-       
+            builder.Services.AddScoped<IEpisodeRepository, EpisodeRepository>();
+            builder.Services.AddScoped<IEpisodeService, EpisodeService>();
+
 
 
 

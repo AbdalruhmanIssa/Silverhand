@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using StreamingService.DAL.Models;
+using Silverhand.DAL.Models;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace Silverhand.DAL.Data
     public class ApplicationDbContext:DbContext
     {
         public DbSet<Title> Titles { get; set; }
+        public DbSet<Episode> Episodes { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
     }

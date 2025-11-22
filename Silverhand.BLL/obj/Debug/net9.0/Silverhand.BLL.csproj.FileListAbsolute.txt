@@ -13,3 +13,4 @@ C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.BLL\obj\Debug\n
 C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.BLL\obj\Debug\net9.0\refint\Silverhand.BLL.dll
 C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.BLL\obj\Debug\net9.0\Silverhand.BLL.pdb
 C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.BLL\obj\Debug\net9.0\ref\Silverhand.BLL.dll
+C:\Users\Abood\Desktop\Backend\The Project\Silverhand\Silverhand.BLL\obj\Debug\net9.0\Silverhand.BLL.sourcelink.json

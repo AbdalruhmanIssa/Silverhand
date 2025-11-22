@@ -4,8 +4,9 @@ using Silverhand.BLL.Services.Interface;
 using Silverhand.DAL.Data;
 using Silverhand.DAL.DTO.Requests;
 using Silverhand.DAL.DTO.Responses;
+using Silverhand.DAL.Models;
 using Silverhand.DAL.Repository.Repositories;
-using StreamingService.DAL.Models;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
