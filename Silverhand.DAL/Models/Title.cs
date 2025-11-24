@@ -24,6 +24,10 @@ namespace Silverhand.DAL.Models
 
         // Navigation for later
         public ICollection<Episode>? Episodes { get; set; }
+        public ICollection<Asset> Assets { get; set; }
+        public ICollection<Subtitle> Subtitles { get; set; } 
+       
+
     }
 
     public enum TitleType

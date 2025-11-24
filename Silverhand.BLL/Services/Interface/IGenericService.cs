@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Silverhand.DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,12 +8,16 @@ using System.Threading.Tasks;
 namespace Silverhand.BLL.Services.Interface
 {
     public interface IGenericService<TRequest, TResponse, TEntity>
+       where TEntity : Base
     {
-        IEnumerable<TResponse> GetAll(bool a = false);
-        TResponse? GetById(Guid id);
-        int Create(TRequest request);
-        int Delete(Guid id);
-        int Update(Guid id, TRequest request);
-    
+        Task<TResponse> CreateAsync(TRequest request);
+
+        Task<int> UpdateAsync(Guid id, TRequest request);
+
+        Task<int> DeleteAsync(Guid id);
+
+        Task<TResponse?> GetByIdAsync(Guid id);
+        Task<IEnumerable<TResponse>> GetAllAsync(bool withTracking = false);
+
     }
-}
+    }

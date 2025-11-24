@@ -18,7 +18,10 @@ namespace Silverhand.DAL.Models
         public string Name { get; set; } = null!;
         public string Description { get; set; } = null!;
         public int DurationSeconds { get; set; }
-       
+        public ICollection<Asset> Assets { get; set; }= new List<Asset>();
+        public ICollection<Subtitle> Subtitles { get; set; } = new List<Subtitle>();
+            
+        public ICollection<Thumbnail> Thumbnails { get; set; } = new List<Thumbnail>();
     }
 
 }

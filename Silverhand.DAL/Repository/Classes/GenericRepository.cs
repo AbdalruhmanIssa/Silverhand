@@ -19,34 +19,37 @@ namespace Silverhand.DAL.Repository.Classes
             _context = context;
         }
 
-        public int Add(T Entity)
+        public async Task<T> AddAsync(T entity)
         {
-            _context.Set<T>().Add(Entity);
-            return _context.SaveChanges();
+            await _context.Set<T>().AddAsync(entity);
+            await _context.SaveChangesAsync();
+            return entity;
         }
 
-        public IEnumerable<T> GetAll(bool withTracking = false)
+        public async Task<List<T>> GetAllAsync(bool withTracking = false)
         {
             if (withTracking)
-                return _context.Set<T>().ToList();
+                return await _context.Set<T>().ToListAsync();
 
-            return _context.Set<T>().AsNoTracking().ToList();
+            return await _context.Set<T>().AsNoTracking().ToListAsync();
         }
 
-
-        public T? GetById(Guid id) => _context.Set<T>().Find(id);
-
-
-        public int Remove(T Entity)
+        public async Task<T?> GetByIdAsync(Guid id)
         {
-            _context.Set<T>().Remove(Entity);
-            return _context.SaveChanges();
+            return await _context.Set<T>().FindAsync(id);
         }
 
-        public int Update(T Entity)
+        public async Task<int> RemoveAsync(T entity)
         {
-            _context.Set<T>().Update(Entity);
-            return _context.SaveChanges();
+            _context.Set<T>().Remove(entity);
+            return await _context.SaveChangesAsync();
+        }
+
+        public async Task<int> UpdateAsync(T entity)
+        {
+            _context.Set<T>().Update(entity);
+            return await _context.SaveChangesAsync();
         }
     }
+
 }

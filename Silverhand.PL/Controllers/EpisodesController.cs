@@ -7,6 +7,7 @@ namespace Silverhand.PL.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+  
     public class EpisodesController : ControllerBase
     {
         private readonly IEpisodeService _service;
@@ -16,48 +17,41 @@ namespace Silverhand.PL.Controllers
             _service = service;
         }
 
-        // GET: api/episodes
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            var episodes = _service.GetAll();
-            return Ok(episodes);
+            var items = await _service.GetAllAsync();
+            return Ok(items);
         }
 
-        // GET: api/episodes/{id}
         [HttpGet("{id}")]
-        public IActionResult GetById(Guid id)
+        public async Task<IActionResult> GetById(Guid id)
         {
-            var episode = _service.GetById(id);
-            if (episode == null)
-                return NotFound();
-
-            return Ok(episode);
+            var item = await _service.GetByIdAsync(id);
+            return item is null ? NotFound() : Ok(item);
         }
 
-        // POST: api/episodes
         [HttpPost]
-        public IActionResult Create([FromBody] EpisodeRequest request)
+        public async Task<IActionResult> Create([FromBody] EpisodeRequest request)
         {
-            var created = _service.Create(request);
-            return CreatedAtAction(nameof(GetById), new {id= created }, new { message = request }); // returns number of rows affected (int)
+            var created = await _service.CreateAsync(request);
+            return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
 
-        // PUT: api/episodes/{id}
         [HttpPut("{id}")]
-        public IActionResult Update(Guid id, [FromBody] EpisodeRequest request)
+        public async Task<IActionResult> Update(Guid id, [FromBody] EpisodeRequest request)
         {
-            var updated = _service.Update(id, request);
-            return updated > 0 ? Ok() : NotFound(); 
+            var updated = await _service.UpdateAsync(id, request);
+            return updated == 0 ? NotFound() : Ok();
         }
 
-        // DELETE: api/episodes/{id}
         [HttpDelete("{id}")]
-        public IActionResult Delete(Guid id)
+        public async Task<IActionResult> Delete(Guid id)
         {
-            var deleted = _service.Delete(id);
-            return deleted > 0 ? Ok() : NotFound(); // returns int
+            var deleted = await _service.DeleteAsync(id);
+            return deleted == 0 ? NotFound() : Ok();
         }
     }
+
 
 }

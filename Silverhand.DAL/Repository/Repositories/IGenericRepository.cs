@@ -9,10 +9,11 @@ namespace Silverhand.DAL.Repository.Repositories
 {
     public interface IGenericRepository<T> where T : Base
     {
-        IEnumerable<T> GetAll(bool withTracking = false);
-        T? GetById(Guid id);
-        int Add(T Entity);
-        int Update(T Entity);
-        int Remove(T Entity);
+        Task<T> AddAsync(T entity);
+        Task<int> RemoveAsync(T entity);
+        Task<int> UpdateAsync(T entity);
+
+        Task<T?> GetByIdAsync(Guid id);
+        Task<List<T>> GetAllAsync(bool withTracking = false);
     }
 }

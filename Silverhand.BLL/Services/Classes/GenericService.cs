@@ -11,52 +11,52 @@ using System.Threading.Tasks;
 
 namespace Silverhand.BLL.Services.Classes
 {
-    public class GenericService<TRequest, TResponse, TEntity> : IGenericService<TRequest, TResponse, TEntity>
+    public class GenericService<TRequest, TResponse, TEntity>
+        : IGenericService<TRequest, TResponse, TEntity>
         where TEntity : Base
     {
-        private readonly IGenericRepository<TEntity> _geniricService;
-        public GenericService(IGenericRepository<TEntity> geniricService)
+        private readonly IGenericRepository<TEntity> _repo;
+
+        public GenericService(IGenericRepository<TEntity> repo)
         {
-            _geniricService = geniricService;
+            _repo = repo;
         }
-        public int Create(TRequest request)
+
+        public async Task<TResponse> CreateAsync(TRequest request)
         {
             var entity = request.Adapt<TEntity>();
-            return _geniricService.Add(entity);
+            await _repo.AddAsync(entity);
+            return entity.Adapt<TResponse>();
         }
 
-        public int Delete(Guid id)
+        public async Task<int> DeleteAsync(Guid id)
         {
-            var entity = _geniricService.GetById(id);
+            var entity = await _repo.GetByIdAsync(id);
             if (entity is null) return 0;
 
-            return _geniricService.Remove(entity);
+            return await _repo.RemoveAsync(entity);
         }
 
-  
-
-        public IEnumerable<TResponse> GetAll(bool a = false)
+        public async Task<IEnumerable<TResponse>> GetAllAsync(bool withTracking = false)
         {
-            var entities = _geniricService.GetAll();
-            
+            var entities = await _repo.GetAllAsync(withTracking);
             return entities.Adapt<IEnumerable<TResponse>>();
         }
 
-        public TResponse? GetById(Guid id)
+        public async Task<TResponse?> GetByIdAsync(Guid id)
         {
-            var entity = _geniricService.GetById(id);
+            var entity = await _repo.GetByIdAsync(id);
             return entity is null ? default : entity.Adapt<TResponse>();
         }
 
-       
-
-        public int Update(Guid id, TRequest request)
+        public async Task<int> UpdateAsync(Guid id, TRequest request)
         {
-            var entity = _geniricService.GetById(id);
+            var entity = await _repo.GetByIdAsync(id);
             if (entity is null) return 0;
-            var updated = request.Adapt(entity);
-            return _geniricService.Update(updated);
-        }
 
+            var updated = request.Adapt(entity);
+            return await _repo.UpdateAsync(updated);
+        }
     }
+
 }

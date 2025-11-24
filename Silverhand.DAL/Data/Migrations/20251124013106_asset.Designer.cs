@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Silverhand.DAL.Data;
 
@@ -11,9 +12,11 @@ using Silverhand.DAL.Data;
 namespace Silverhand.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251124013106_asset")]
+    partial class asset
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,6 +24,43 @@ namespace Silverhand.DAL.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Silverhand.DAL.Models.Asset", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("EpisodeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Quality")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("TitleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("VideoUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EpisodeId");
+
+                    b.HasIndex("TitleId");
+
+                    b.ToTable("Assets");
+                });
 
             modelBuilder.Entity("Silverhand.DAL.Models.Episode", b =>
                 {
@@ -105,6 +145,23 @@ namespace Silverhand.DAL.Migrations
                     b.ToTable("Titles");
                 });
 
+            modelBuilder.Entity("Silverhand.DAL.Models.Asset", b =>
+                {
+                    b.HasOne("Silverhand.DAL.Models.Episode", "Episode")
+                        .WithMany("Assets")
+                        .HasForeignKey("EpisodeId");
+
+                    b.HasOne("Silverhand.DAL.Models.Title", "Title")
+                        .WithMany("Assets")
+                        .HasForeignKey("TitleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Episode");
+
+                    b.Navigation("Title");
+                });
+
             modelBuilder.Entity("Silverhand.DAL.Models.Episode", b =>
                 {
                     b.HasOne("Silverhand.DAL.Models.Title", "Title")
@@ -116,8 +173,15 @@ namespace Silverhand.DAL.Migrations
                     b.Navigation("Title");
                 });
 
+            modelBuilder.Entity("Silverhand.DAL.Models.Episode", b =>
+                {
+                    b.Navigation("Assets");
+                });
+
             modelBuilder.Entity("Silverhand.DAL.Models.Title", b =>
                 {
+                    b.Navigation("Assets");
+
                     b.Navigation("Episodes");
                 });
 #pragma warning restore 612, 618

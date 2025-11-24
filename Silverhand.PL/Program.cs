@@ -22,6 +22,13 @@ options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"
             builder.Services.AddScoped<IFileService, FileService>();
             builder.Services.AddScoped<IEpisodeRepository, EpisodeRepository>();
             builder.Services.AddScoped<IEpisodeService, EpisodeService>();
+            builder.Services.AddScoped<IAssetService, AssetService>();
+            builder.Services.AddScoped<IAssetRepository, AssetRepository>();
+            builder.Services.AddScoped<ISubtitleService,SubtitleService>();
+            builder.Services.AddScoped<ISubtitleRepository, SubtitleRepository>();
+            builder.Services.AddScoped<IThumbmailService, ThumbnailService>();
+            builder.Services.AddScoped<IThumbnailRepository, ThumbnailRepository>();
+
 
 
 

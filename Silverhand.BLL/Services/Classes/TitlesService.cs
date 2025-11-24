@@ -17,6 +17,8 @@ namespace Silverhand.BLL.Services.Classes
 {
     public class TitlesService : GenericService<TitleRequest, TitleResponse, Title>, ITitlesService
     {
+      
+
         private readonly ITitleRepository _repository;
         private readonly IFileService _fileService;
         private readonly ApplicationDbContext _context;
@@ -47,7 +49,7 @@ namespace Silverhand.BLL.Services.Classes
             }
 
             // Add entity
-             _repository.Add(entity);
+             await _repository.AddAsync(entity);
             await _context.SaveChangesAsync();
 
             return entity.Id;
@@ -61,7 +63,7 @@ namespace Silverhand.BLL.Services.Classes
             int pageNum = 1,
             int pageSize = 10)
         {
-            var titles =  _repository.GetAll();
+            var titles = await _repository.GetAllAsync();
 
             var paged = titles
                 .Skip((pageNum - 1) * pageSize)

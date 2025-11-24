@@ -13,6 +13,10 @@ namespace Silverhand.DAL.Data
     {
         public DbSet<Title> Titles { get; set; }
         public DbSet<Episode> Episodes { get; set; }
+        public DbSet<Asset> Assets { get; set; }
+        public DbSet<Subtitle> Subtitles { get; set; }
+        public DbSet<Thumbnail> Thumbnails { get; set; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
     }
