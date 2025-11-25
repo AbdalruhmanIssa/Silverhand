@@ -8,17 +8,17 @@ namespace Silverhand.PL.Controllers.Admin
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ThumbnailsController : ControllerBase
+    public class InjestJobsController : ControllerBase
     {
-        private readonly IThumbmailService _service;
+        private readonly IIngestJobService _service;
 
-        public ThumbnailsController(IThumbmailService service)
+        public InjestJobsController(IIngestJobService service)
         {
             _service = service;
         }
         [HttpPost("")]
         
-        public async Task<IActionResult> Create([FromForm] ThumbnailRequest request)
+        public async Task<IActionResult> Create([FromForm] IngestJobRequest request)
         {
             var result = await _service.CreateFile(request);
             return Ok(result);

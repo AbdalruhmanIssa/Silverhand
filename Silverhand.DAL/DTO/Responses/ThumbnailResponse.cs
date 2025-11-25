@@ -19,7 +19,7 @@ namespace Silverhand.DAL.DTO.Responses
 
         // Image file location
         public string ImageUrl { get; set; } = default!;
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; set; }
 
 
         // Optional: If in the future you want scene-based thumbnails (00:10, 00:20, etc)

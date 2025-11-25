@@ -11,6 +11,7 @@ namespace Silverhand.BLL.Services.Interface
     public interface  IFileService
     {
         Task<string> UploadAsync(IFormFile file);
+        Task<string> UploadAsyncVid(IFormFile file);
         Task<List<string>> UploadManyAsync(List<IFormFile> files);
     }
 }

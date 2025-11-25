@@ -27,7 +27,23 @@ namespace Silverhand.BLL.Services.Classes
 
             throw new Exception("error");
         }
+        public async Task<string> UploadAsyncVid(IFormFile file)
+        {
+            if (file != null && file.Length > 0)
+            {
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Vids", fileName);
 
+                using (var stream = File.Create(filePath))
+                {
+                    await file.CopyToAsync(stream);
+                }
+
+                return fileName;
+            }
+
+            throw new Exception("error");
+        }
         public async Task<List<string>> UploadManyAsync(List<IFormFile> files)
         {
             var fileNames = new List<string>();
