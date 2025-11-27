@@ -18,6 +18,7 @@ namespace Silverhand.DAL.Data
         public DbSet<Subtitle> Subtitles { get; set; }
         public DbSet<Thumbnail> Thumbnails { get; set; }
         public DbSet<IngestJob> IngestJobs { get; set; }
+        public DbSet<Profile> Profiles { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
     }

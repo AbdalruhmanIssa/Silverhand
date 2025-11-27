@@ -43,6 +43,8 @@ options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<ISeedData, SeedData>();
             builder.Services.AddScoped<IEmailSender, Emailsetting>();
+            builder.Services.AddScoped<IProfileService, ProfileService>();
+            builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
