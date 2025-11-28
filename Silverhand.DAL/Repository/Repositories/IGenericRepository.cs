@@ -15,5 +15,6 @@ namespace Silverhand.DAL.Repository.Repositories
 
         Task<T?> GetByIdAsync(Guid id);
         Task<List<T>> GetAllAsync(bool withTracking = false);
+       
     }
 }

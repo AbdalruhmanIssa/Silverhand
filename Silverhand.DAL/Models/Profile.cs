@@ -37,8 +37,9 @@ namespace Silverhand.DAL.Models
         // Tracking
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? LastUsedAt { get; set; }
+        public ICollection<Favorite> Favorites { get; set; } = new List<Favorite>();
 
-       
+
     }
     public enum ProfileLanguage
     {

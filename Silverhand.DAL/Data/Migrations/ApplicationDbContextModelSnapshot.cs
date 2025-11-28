@@ -315,6 +315,30 @@ namespace Silverhand.DAL.Migrations
                     b.ToTable("Episodes");
                 });
 
+            modelBuilder.Entity("Silverhand.DAL.Models.Favorite", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("ProfileId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("TitleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProfileId");
+
+                    b.HasIndex("TitleId");
+
+                    b.ToTable("Favorites");
+                });
+
             modelBuilder.Entity("Silverhand.DAL.Models.IngestJob", b =>
                 {
                     b.Property<Guid>("Id")
@@ -359,6 +383,53 @@ namespace Silverhand.DAL.Migrations
                     b.HasIndex("TitleId");
 
                     b.ToTable("IngestJobs");
+                });
+
+            modelBuilder.Entity("Silverhand.DAL.Models.Plan", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("AdsEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Currency")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Interval")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MaxConcurrentStreams")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MaxResolution")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Plans");
                 });
 
             modelBuilder.Entity("Silverhand.DAL.Models.Profile", b =>
@@ -518,6 +589,44 @@ namespace Silverhand.DAL.Migrations
                     b.ToTable("Titles");
                 });
 
+            modelBuilder.Entity("Silverhand.DAL.Models.WatchProgress", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Completed")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("DurationSeconds")
+                        .HasColumnType("int");
+
+                    b.Property<Guid?>("EpisodeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ProfileId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("ProgressSeconds")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("TitleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EpisodeId");
+
+                    b.HasIndex("ProfileId");
+
+                    b.HasIndex("TitleId");
+
+                    b.ToTable("WatchProgresses");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -597,6 +706,25 @@ namespace Silverhand.DAL.Migrations
                     b.Navigation("Title");
                 });
 
+            modelBuilder.Entity("Silverhand.DAL.Models.Favorite", b =>
+                {
+                    b.HasOne("Silverhand.DAL.Models.Profile", "Profile")
+                        .WithMany("Favorites")
+                        .HasForeignKey("ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silverhand.DAL.Models.Title", "Title")
+                        .WithMany()
+                        .HasForeignKey("TitleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Profile");
+
+                    b.Navigation("Title");
+                });
+
             modelBuilder.Entity("Silverhand.DAL.Models.IngestJob", b =>
                 {
                     b.HasOne("Silverhand.DAL.Models.Episode", "Episode")
@@ -655,6 +783,36 @@ namespace Silverhand.DAL.Migrations
                     b.Navigation("Episode");
 
                     b.Navigation("Title");
+                });
+
+            modelBuilder.Entity("Silverhand.DAL.Models.WatchProgress", b =>
+                {
+                    b.HasOne("Silverhand.DAL.Models.Episode", "Episode")
+                        .WithMany()
+                        .HasForeignKey("EpisodeId");
+
+                    b.HasOne("Silverhand.DAL.Models.Profile", "Profile")
+                        .WithMany()
+                        .HasForeignKey("ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silverhand.DAL.Models.Title", "Title")
+                        .WithMany()
+                        .HasForeignKey("TitleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Episode");
+
+                    b.Navigation("Profile");
+
+                    b.Navigation("Title");
+                });
+
+            modelBuilder.Entity("Silverhand.DAL.Models.Profile", b =>
+                {
+                    b.Navigation("Favorites");
                 });
 
             modelBuilder.Entity("Silverhand.DAL.Models.Title", b =>

@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace Silverhand.DAL.Repository.Classes
 {
-    public class ThumbnailRepository : GenericRepository<Thumbnail>,IThumbnailRepository
+    public class TitleRepository:GenericRepository<Title>,ITitleRepository
     {
-        public ThumbnailRepository(ApplicationDbContext applicationDbContext):base(applicationDbContext) { }
+        public TitleRepository(ApplicationDbContext applicationDbContext):base(applicationDbContext) { }
     }
 }

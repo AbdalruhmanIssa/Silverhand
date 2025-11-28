@@ -45,6 +45,12 @@ options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"
             builder.Services.AddScoped<IEmailSender, Emailsetting>();
             builder.Services.AddScoped<IProfileService, ProfileService>();
             builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
+            builder.Services.AddScoped<IFavoriteRepository, FavoriteRepository>();
+            builder.Services.AddScoped<IFavoriteService, FavoriteService>();
+            builder.Services.AddScoped<IWatchProgressRepository, WatchProgressRepository>();
+            builder.Services.AddScoped<IWatchProgressService, WatchProgressService>();
+            builder.Services.AddScoped<IPlanService, PlanService>();
+            builder.Services.AddScoped<IPlanRepository, PlanRepository>();
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
