@@ -13,6 +13,7 @@ using Silverhand.DAL.Repository.Classes;
 using Silverhand.DAL.Repository.Repositories;
 using Silverhand.DAL.Utilites;
 using Silverhand.PL.Uti;
+using Stripe;
 using System.Text;
 
 namespace Silverhand.PL
@@ -27,7 +28,7 @@ options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"
             // Add services to the container.
             builder.Services.AddScoped<ITitleRepository, TitleRepository>();
             builder.Services.AddScoped<ITitlesService, TitlesService>();
-            builder.Services.AddScoped<IFileService, FileService>();
+            builder.Services.AddScoped<IFileService, BLL.Services.Classes.FileService>();
             builder.Services.AddScoped<IEpisodeRepository, EpisodeRepository>();
             builder.Services.AddScoped<IEpisodeService, EpisodeService>();
             builder.Services.AddScoped<IAssetService, AssetService>();
@@ -49,8 +50,12 @@ options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"
             builder.Services.AddScoped<IFavoriteService, FavoriteService>();
             builder.Services.AddScoped<IWatchProgressRepository, WatchProgressRepository>();
             builder.Services.AddScoped<IWatchProgressService, WatchProgressService>();
-            builder.Services.AddScoped<IPlanService, PlanService>();
+            builder.Services.AddScoped<IPlanService, BLL.Services.Classes.PlanService>();
             builder.Services.AddScoped<IPlanRepository, PlanRepository>();
+            builder.Services.AddScoped<ISubscriptionService, BLL.Services.Classes.SubscriptionService>();
+            builder.Services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
+            builder.Services.AddScoped<IPaymentService, PaymentService>();
+            builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
@@ -93,6 +98,11 @@ options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
+            builder.Services.Configure<StripeSettings>(
+    builder.Configuration.GetSection("Stripe")
+);
+
+            StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
 
             var app = builder.Build();
 

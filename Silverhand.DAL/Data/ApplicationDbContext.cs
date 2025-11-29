@@ -22,6 +22,8 @@ namespace Silverhand.DAL.Data
         public DbSet<Favorite> Favorites { get; set; }
         public DbSet<WatchProgress> WatchProgresses { get; set; }
         public DbSet<Plan> Plans { get; set; }
+        public DbSet<Subscription> Subscriptions { get; set; }
+        public DbSet<Payment> Payments { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
     }
