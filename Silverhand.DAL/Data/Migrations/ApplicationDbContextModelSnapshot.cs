@@ -273,6 +273,45 @@ namespace Silverhand.DAL.Migrations
                     b.ToTable("Assets");
                 });
 
+            modelBuilder.Entity("Silverhand.DAL.Models.AvailabilityWindow", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("EndsAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("EpisodeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RegionCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("StartsAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("TitleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AvailabilityWindows");
+                });
+
             modelBuilder.Entity("Silverhand.DAL.Models.Episode", b =>
                 {
                     b.Property<Guid>("Id")

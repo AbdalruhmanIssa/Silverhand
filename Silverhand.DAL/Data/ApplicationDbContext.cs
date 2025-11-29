@@ -24,6 +24,7 @@ namespace Silverhand.DAL.Data
         public DbSet<Plan> Plans { get; set; }
         public DbSet<Subscription> Subscriptions { get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<AvailabilityWindow> AvailabilityWindows { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
     }

@@ -1,4 +1,3 @@
-
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -56,6 +55,8 @@ options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"
             builder.Services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
             builder.Services.AddScoped<IPaymentService, PaymentService>();
             builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
+            builder.Services.AddScoped<IAvailabilityWindowRepository, AvailabilityWindowRepository>();
+            builder.Services.AddScoped<IAvailabilityWindowService, AvailabilityWindowService>();
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {

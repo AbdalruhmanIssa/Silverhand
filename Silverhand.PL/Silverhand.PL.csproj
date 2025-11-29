@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Silverhand.BLL\Silverhand.BLL.csproj" />
+    <ProjectReference Include="..\Silverhand.DAL\Silverhand.DAL.csproj" />
   </ItemGroup>
 
   <ItemGroup>
