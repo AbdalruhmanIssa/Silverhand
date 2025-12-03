@@ -80,6 +80,10 @@
               "target": "Package",
               "version": "[9.0.11, )"
             },
+            "Scalar.AspNetCore": {
+              "target": "Package",
+              "version": "[2.11.0, )"
+            },
             "Stripe.net": {
               "target": "Package",
               "version": "[50.0.0, )"

@@ -1,24 +1,28 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Silverhand.BLL.Services.Interface;
 using Silverhand.DAL.DTO.Requests;
 using Silverhand.DAL.DTO.Responses;
+using Silverhand.DAL.DTO.Updates;
 
 namespace Silverhand.PL.Controllers.Admin
 {
-    [Route("api/[controller]")]
+    [Route("api/[area]/[controller]")]
     [ApiController]
-    public class ThumbnailsController : ControllerBase
+    [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
+    public class InjestJobsController : ControllerBase
     {
-        private readonly IThumbmailService _service;
+        private readonly IIngestJobService _service;
 
-        public ThumbnailsController(IThumbmailService service)
+        public InjestJobsController(IIngestJobService service)
         {
             _service = service;
         }
         [HttpPost("")]
         
-        public async Task<IActionResult> Create([FromForm] ThumbnailRequest request)
+        public async Task<IActionResult> Create([FromForm] IngestJobRequest request)
         {
             var result = await _service.CreateFile(request);
             return Ok(result);
@@ -29,6 +33,8 @@ namespace Silverhand.PL.Controllers.Admin
             var items = await _service.GetAllAsync();
             return Ok(items);
         }
+       
+
 
     }
 }

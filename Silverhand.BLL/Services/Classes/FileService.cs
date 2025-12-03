@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Silverhand.BLL.Services.Interface;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,12 @@ namespace Silverhand.BLL.Services.Classes
 {
     public class FileService : IFileService
     {
+        private readonly IWebHostEnvironment _env;
+
+        public FileService(IWebHostEnvironment env)
+        {
+            _env = env;
+        }
         public async Task<string> UploadAsync(IFormFile file)
         {
             if (file != null && file.Length > 0)
@@ -66,6 +73,19 @@ namespace Silverhand.BLL.Services.Classes
 
             return fileNames;
         }
+        public void Delete(string fileName)
+        {
+            var folderPath = Path.Combine(_env.WebRootPath, "images");
+            var filePath = Path.Combine(folderPath, fileName);
+
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
+            }
+        }
+
+
+
 
     }
 }

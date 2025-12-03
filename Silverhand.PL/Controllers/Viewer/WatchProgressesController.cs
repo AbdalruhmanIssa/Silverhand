@@ -7,7 +7,7 @@ namespace Silverhand.PL.Controllers.Viewer
 {
     [Route("api/[area]/[controller]")]
     [ApiController]
-    [Area("Customer")]
+    [Area("Viewer")]
     [Authorize(Roles = "Customer")]
     public class WatchProgressesController : ControllerBase
     {

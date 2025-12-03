@@ -1,9 +1,11 @@
-﻿using Silverhand.DAL.DTO.Requests;
+﻿using Azure;
+using Silverhand.DAL.DTO.Requests;
 using Silverhand.DAL.DTO.Responses;
 using Silverhand.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,5 +13,7 @@ namespace Silverhand.BLL.Services.Interface
 {
     public interface IEpisodeService:IGenericService<EpisodeRequest,EpisodeResponse,Episode>
     {
+        IEnumerable<EpisodeResponse> GetWhere(Expression<Func<Episode, bool>> predicate);
+
     }
 }

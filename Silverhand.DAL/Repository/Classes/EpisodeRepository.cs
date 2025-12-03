@@ -6,6 +6,7 @@ using Silverhand.DAL.Repository.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,6 +23,13 @@ namespace Silverhand.DAL.Repository.Classes
         }
 
         // Override GetById
+        public IEnumerable<Episode> GetWhere(Expression<Func<Episode, bool>> predicate)
+        {
+            return _context.Set<Episode>()
+                .Where(predicate)
+                .ToList();
+        }
+
         public new Episode? GetById(Guid id)
         {
             return _context.Episodes

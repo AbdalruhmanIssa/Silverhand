@@ -1,5 +1,84 @@
 [
   {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.AssetsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Admin/Assets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.AssetsController",
+    "Method": "Create",
+    "RelativePath": "api/Admin/Assets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Silverhand.DAL.DTO.Requests.AssetRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.AssetsController",
+    "Method": "GetById",
+    "RelativePath": "api/Admin/Assets/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.AssetsController",
+    "Method": "Update",
+    "RelativePath": "api/Admin/Assets/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Silverhand.DAL.DTO.Requests.AssetRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.AssetsController",
+    "Method": "Delete",
+    "RelativePath": "api/Admin/Assets/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Silverhand.PL.Controllers.Admin.AvailabilityWindowsController",
     "Method": "Create",
     "RelativePath": "api/Admin/AvailabilityWindows",
@@ -13,6 +92,110 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.EpisodesController",
+    "Method": "Create",
+    "RelativePath": "api/Admin/Episodes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Silverhand.DAL.DTO.Requests.EpisodeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.EpisodesController",
+    "Method": "Update",
+    "RelativePath": "api/Admin/Episodes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Silverhand.DAL.DTO.Requests.EpisodeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.EpisodesController",
+    "Method": "Delete",
+    "RelativePath": "api/Admin/Episodes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.InjestJobsController",
+    "Method": "Create",
+    "RelativePath": "api/Admin/InjestJobs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TitleId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "SourceUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ResultJson",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "StartedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompletedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.InjestJobsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Admin/InjestJobs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -57,6 +240,256 @@
     "Method": "Deactivate",
     "RelativePath": "api/Admin/Plans/deactivate/{id}",
     "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.SubtitlesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Admin/Subtitles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.SubtitlesController",
+    "Method": "Create",
+    "RelativePath": "api/Admin/Subtitles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Silverhand.DAL.DTO.Requests.SubtitleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.SubtitlesController",
+    "Method": "GetById",
+    "RelativePath": "api/Admin/Subtitles/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.SubtitlesController",
+    "Method": "Update",
+    "RelativePath": "api/Admin/Subtitles/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Silverhand.DAL.DTO.Requests.SubtitleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.SubtitlesController",
+    "Method": "Delete",
+    "RelativePath": "api/Admin/Subtitles/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.ThumbnailsController",
+    "Method": "Create",
+    "RelativePath": "api/Admin/Thumbnails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EpisodeId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "SceneSecond",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.ThumbnailsController",
+    "Method": "Update",
+    "RelativePath": "api/Admin/Thumbnails/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "EpisodeId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "SceneSecond",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.ThumbnailsController",
+    "Method": "Delete",
+    "RelativePath": "api/Admin/Thumbnails/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.TitlesController",
+    "Method": "Create",
+    "RelativePath": "api/Admin/Titles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Type",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ReleaseYear",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosterUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "BackdropUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.TitlesController",
+    "Method": "Update",
+    "RelativePath": "api/Admin/Titles/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Type",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ReleaseYear",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosterImage",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.TitlesController",
+    "Method": "Delete",
+    "RelativePath": "api/Admin/Titles/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -163,437 +596,6 @@
       {
         "Name": "userId",
         "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Admin.AssetsController",
-    "Method": "GetAll",
-    "RelativePath": "api/Assets",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Admin.AssetsController",
-    "Method": "Create",
-    "RelativePath": "api/Assets",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Silverhand.DAL.DTO.Requests.AssetRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Admin.AssetsController",
-    "Method": "GetById",
-    "RelativePath": "api/Assets/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Admin.AssetsController",
-    "Method": "Update",
-    "RelativePath": "api/Assets/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "request",
-        "Type": "Silverhand.DAL.DTO.Requests.AssetRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Admin.AssetsController",
-    "Method": "Delete",
-    "RelativePath": "api/Assets/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.AvailabilityWindowsController",
-    "Method": "GetForEpisode",
-    "RelativePath": "api/Customer/AvailabilityWindows/episode/{episodeId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "episodeId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.AvailabilityWindowsController",
-    "Method": "GetForTitle",
-    "RelativePath": "api/Customer/AvailabilityWindows/title/{titleId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "titleId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.FavoritesController",
-    "Method": "AddFavorite",
-    "RelativePath": "api/Customer/Favorites",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Silverhand.DAL.DTO.Requests.FavoriteRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.FavoritesController",
-    "Method": "GetFavorites",
-    "RelativePath": "api/Customer/Favorites/{profileId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "profileId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.FavoritesController",
-    "Method": "RemoveFavorite",
-    "RelativePath": "api/Customer/Favorites/{profileId}/{titleId}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "profileId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "titleId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.PaymentsController",
-    "Method": "Start",
-    "RelativePath": "api/Customer/Payments/start",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Silverhand.DAL.DTO.Requests.PaymentRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.PaymentsController",
-    "Method": "Success",
-    "RelativePath": "api/Customer/Payments/success/{subscriptionId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "subscriptionId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.PlansController",
-    "Method": "GetAll",
-    "RelativePath": "api/Customer/Plans",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.PlansController",
-    "Method": "GetById",
-    "RelativePath": "api/Customer/Plans/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.SubscriptionsController",
-    "Method": "Cancel",
-    "RelativePath": "api/Customer/Subscriptions/cancel",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.SubscriptionsController",
-    "Method": "GetCurrent",
-    "RelativePath": "api/Customer/Subscriptions/current",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.SubscriptionsController",
-    "Method": "Subscribe",
-    "RelativePath": "api/Customer/Subscriptions/subscribe",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Silverhand.DAL.DTO.Requests.SubscriptionRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Controller.TitlesController",
-    "Method": "Create",
-    "RelativePath": "api/Customer/Titles",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Name",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Type",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Description",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ReleaseYear",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "PosterUrl",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "BackdropUrl",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Controller.TitlesController",
-    "Method": "GetAll",
-    "RelativePath": "api/Customer/Titles",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "pageNumber",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "pageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.WatchProgressesController",
-    "Method": "GetForProfile",
-    "RelativePath": "api/Customer/WatchProgresses/{profileId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "profileId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.WatchProgressesController",
-    "Method": "Update",
-    "RelativePath": "api/Customer/WatchProgresses/update",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "WatchProgressRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.EpisodesController",
-    "Method": "GetAll",
-    "RelativePath": "api/Episodes",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.EpisodesController",
-    "Method": "Create",
-    "RelativePath": "api/Episodes",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Silverhand.DAL.DTO.Requests.EpisodeRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.EpisodesController",
-    "Method": "GetById",
-    "RelativePath": "api/Episodes/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.EpisodesController",
-    "Method": "Update",
-    "RelativePath": "api/Episodes/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "request",
-        "Type": "Silverhand.DAL.DTO.Requests.EpisodeRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.EpisodesController",
-    "Method": "Delete",
-    "RelativePath": "api/Episodes/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -735,58 +737,7 @@
     ]
   },
   {
-    "ContainingType": "Silverhand.PL.Controllers.Admin.InjestJobsController",
-    "Method": "Create",
-    "RelativePath": "api/InjestJobs",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "TitleId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "SourceUrl",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "ResultJson",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Status",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "StartedAt",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "CompletedAt",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Admin.InjestJobsController",
-    "Method": "GetAll",
-    "RelativePath": "api/InjestJobs",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.ProfilesController",
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.ProfilesController",
     "Method": "Create",
     "RelativePath": "api/Profiles",
     "HttpMethod": "POST",
@@ -822,7 +773,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Silverhand.PL.Controllers.ProfilesController",
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.ProfilesController",
     "Method": "GetMyProfiles",
     "RelativePath": "api/Profiles",
     "HttpMethod": "GET",
@@ -832,41 +783,95 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Silverhand.PL.Controllers.Admin.SubtitlesController",
-    "Method": "GetAll",
-    "RelativePath": "api/Subtitles",
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.AvailabilityWindowsController",
+    "Method": "GetForEpisode",
+    "RelativePath": "api/Viewer/AvailabilityWindows/episode/{episodeId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "episodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Silverhand.PL.Controllers.Admin.SubtitlesController",
-    "Method": "Create",
-    "RelativePath": "api/Subtitles",
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.AvailabilityWindowsController",
+    "Method": "GetForTitle",
+    "RelativePath": "api/Viewer/AvailabilityWindows/title/{titleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "titleId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.EpisodesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Viewer/Episodes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "titleId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.EpisodesController",
+    "Method": "GetById",
+    "RelativePath": "api/Viewer/Episodes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.FavoritesController",
+    "Method": "AddFavorite",
+    "RelativePath": "api/Viewer/Favorites",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Silverhand.DAL.DTO.Requests.SubtitleRequest",
+        "Type": "Silverhand.DAL.DTO.Requests.FavoriteRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Silverhand.PL.Controllers.Admin.SubtitlesController",
-    "Method": "GetById",
-    "RelativePath": "api/Subtitles/{id}",
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.FavoritesController",
+    "Method": "GetFavorites",
+    "RelativePath": "api/Viewer/Favorites/{profileId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "profileId",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -874,35 +879,77 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Silverhand.PL.Controllers.Admin.SubtitlesController",
-    "Method": "Update",
-    "RelativePath": "api/Subtitles/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "request",
-        "Type": "Silverhand.DAL.DTO.Requests.SubtitleRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Admin.SubtitlesController",
-    "Method": "Delete",
-    "RelativePath": "api/Subtitles/{id}",
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.FavoritesController",
+    "Method": "RemoveFavorite",
+    "RelativePath": "api/Viewer/Favorites/{profileId}/{titleId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
+        "Name": "profileId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "titleId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.PaymentsController",
+    "Method": "Start",
+    "RelativePath": "api/Viewer/Payments/start",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Silverhand.DAL.DTO.Requests.PaymentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.PaymentsController",
+    "Method": "Success",
+    "RelativePath": "api/Viewer/Payments/success/{subscriptionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "subscriptionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.PlansController",
+    "Method": "GetAll",
+    "RelativePath": "api/Viewer/Plans",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.PlansController",
+    "Method": "GetById",
+    "RelativePath": "api/Viewer/Plans/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
         "Name": "id",
         "Type": "System.Guid",
         "IsRequired": true
@@ -911,35 +958,45 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Silverhand.PL.Controllers.Admin.ThumbnailsController",
-    "Method": "Create",
-    "RelativePath": "api/Thumbnails",
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.SubscriptionsController",
+    "Method": "Cancel",
+    "RelativePath": "api/Viewer/Subscriptions/cancel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.SubscriptionsController",
+    "Method": "GetCurrent",
+    "RelativePath": "api/Viewer/Subscriptions/current",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.SubscriptionsController",
+    "Method": "Subscribe",
+    "RelativePath": "api/Viewer/Subscriptions/subscribe",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "EpisodeId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "ImageUrl",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "SceneSecond",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "Silverhand.DAL.DTO.Requests.SubscriptionRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Silverhand.PL.Controllers.Admin.ThumbnailsController",
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.ThumbnailsController",
     "Method": "GetAll",
-    "RelativePath": "api/Thumbnails",
+    "RelativePath": "api/Viewer/Thumbnails",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -947,24 +1004,88 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Silverhand.PL.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.ThumbnailsController",
+    "Method": "GetById",
+    "RelativePath": "api/Viewer/Thumbnails/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Silverhand.PL.WeatherForecast, Silverhand.PL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
       }
     ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Controller.TitlesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Viewer/Titles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Controller.TitlesController",
+    "Method": "GetById",
+    "RelativePath": "api/Viewer/Titles/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.WatchProgressesController",
+    "Method": "GetForProfile",
+    "RelativePath": "api/Viewer/WatchProgresses/{profileId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "profileId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.WatchProgressesController",
+    "Method": "Update",
+    "RelativePath": "api/Viewer/WatchProgresses/update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WatchProgressRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

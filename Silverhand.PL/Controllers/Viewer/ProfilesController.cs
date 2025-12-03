@@ -5,10 +5,11 @@ using Silverhand.DAL.DTO.Requests;
 using System.Security.Claims;
 
 
-namespace Silverhand.PL.Controllers
+namespace Silverhand.PL.Controllers.Viewer
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Area("Viewer")]
     [Authorize(Roles = "Customer")]
 
     public class ProfilesController : ControllerBase

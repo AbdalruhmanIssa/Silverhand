@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Silverhand.DAL.DTO.Requests;
 using Silverhand.DAL.DTO.Responses;
+using Silverhand.DAL.DTO.Updates;
 using Silverhand.DAL.Models;
 
 using System;
@@ -15,6 +16,8 @@ namespace Silverhand.BLL.Services.Interface
     {
         Task<Guid> CreateFile(TitleRequest request);
         Task<List<TitleResponse>> GetTitles(HttpRequest request, bool onlyActive = false, int pagenum = 1, int pagesize = 1);
-
+        Task<TitleResponse> UpdateAsync(Guid id, UpdateTitleRequest request);
+        Task<bool> DeleteAsync(Guid id);
+        Task<TitleResponse> GetByIdTitle(Guid id, HttpRequest httpRequest);
     }
 }

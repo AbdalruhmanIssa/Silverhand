@@ -13,5 +13,6 @@ namespace Silverhand.BLL.Services.Interface
         Task<string> UploadAsync(IFormFile file);
         Task<string> UploadAsyncVid(IFormFile file);
         Task<List<string>> UploadManyAsync(List<IFormFile> files);
+        void Delete(string fileName);
     }
 }

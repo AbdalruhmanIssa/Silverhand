@@ -1,12 +1,15 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Silverhand.BLL.Services.Interface;
 using Silverhand.DAL.DTO.Requests;
 
 namespace Silverhand.PL.Controllers.Admin
 {
+    [Route("api/[area]/[controller]")]
     [ApiController]
-    [Route("api/[controller]")]
+    [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class SubtitlesController : ControllerBase
     {
         private readonly ISubtitleService _service;

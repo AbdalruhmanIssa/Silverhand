@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Silverhand.BLL.Services.Classes;
 using Silverhand.BLL.Services.Interface;
 using Silverhand.DAL.DTO.Requests;
 using Silverhand.DAL.Repository.Repositories;
@@ -10,29 +11,35 @@ namespace Silverhand.PL.Controllers.Controller
 {
     [Route("api/[area]/[controller]")]
     [ApiController]
-    [Area("Customer")]
+    [Area("Viewer")]
     [Authorize(Roles = "Customer")]
     public class TitlesController : ControllerBase
     {
-        private readonly ITitlesService _productService;
+        private readonly ITitlesService _titlesService;
 
-        public TitlesController(ITitlesService productService)
+        public TitlesController(ITitlesService titlesService)
         {
-            _productService = productService;
+            _titlesService = titlesService;
         }
-        [HttpPost("")]
-        public async Task<IActionResult> Create([FromForm] TitleRequest request)
-        {
-            var result = await _productService.CreateFile(request);
-            return Ok(result);
-        }
+        
         [HttpGet("")]
         public  async Task<IActionResult> GetAll(
       [FromQuery] int pageNumber = 1,
       [FromQuery] int pageSize = 5)
         {
-            var products =await _productService.GetTitles(Request, false, pageNumber, pageSize);
+            var products =await _titlesService.GetTitles(Request, false, pageNumber, pageSize);
             return Ok(products);
         }
+        [HttpGet("{id:guid}")]
+        public async Task<IActionResult> GetById(Guid id)
+        {
+            var title = await _titlesService.GetByIdTitle(id, Request);
+
+            if (title == null)
+                return NotFound("Title not found");
+
+            return Ok(title);
+        }
+
     }
 }

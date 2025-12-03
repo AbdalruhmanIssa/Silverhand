@@ -75,8 +75,14 @@
               "version": "[9.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.11, )"
+            },
+            "Scalar.AspNetCore": {
+              "target": "Package",
+              "version": "[2.11.0, )"
             },
             "Stripe.net": {
               "target": "Package",
@@ -178,6 +184,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.11, )"
+            },
+            "Scalar.AspNetCore": {
+              "target": "Package",
+              "version": "[2.11.0, )"
             },
             "Stripe.net": {
               "target": "Package",

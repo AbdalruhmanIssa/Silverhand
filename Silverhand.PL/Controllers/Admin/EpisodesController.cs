@@ -1,13 +1,16 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Silverhand.BLL.Services.Interface;
 using Silverhand.DAL.DTO.Requests;
+using Stripe;
 
-namespace Silverhand.PL.Controllers
+namespace Silverhand.PL.Controllers.Admin
 {
+    [Route("api/[area]/[controller]")]
     [ApiController]
-    [Route("api/[controller]")]
-  
+    [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class EpisodesController : ControllerBase
     {
         private readonly IEpisodeService _service;
@@ -17,25 +20,11 @@ namespace Silverhand.PL.Controllers
             _service = service;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
-        {
-            var items = await _service.GetAllAsync();
-            return Ok(items);
-        }
-
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(Guid id)
-        {
-            var item = await _service.GetByIdAsync(id);
-            return item is null ? NotFound() : Ok(item);
-        }
-
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] EpisodeRequest request)
         {
             var created = await _service.CreateAsync(request);
-            return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
+            return Ok();
         }
 
         [HttpPut("{id}")]
@@ -52,6 +41,4 @@ namespace Silverhand.PL.Controllers
             return deleted == 0 ? NotFound() : Ok();
         }
     }
-
-
 }
