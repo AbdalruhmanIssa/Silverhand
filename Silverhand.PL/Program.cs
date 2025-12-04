@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,8 @@ using Silverhand.DAL.Utilites;
 using Silverhand.PL.Uti;
 using Stripe;
 using System.Text;
+using Microsoft.AspNetCore.Http.Features;
+
 
 namespace Silverhand.PL
 {
@@ -104,6 +107,17 @@ options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"
 );
 
             StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
+
+            builder.WebHost.ConfigureKestrel(options =>
+            {
+                options.Limits.MaxRequestBodySize = 200_000_000; // 200MB
+            });
+
+            builder.Services.Configure<FormOptions>(options =>
+            {
+                options.MultipartBodyLengthLimit = 200_000_000; // 200MB
+            });
+
 
             var app = builder.Build();
 

@@ -5,6 +5,7 @@ using Silverhand.DAL.Repository.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,6 +18,12 @@ namespace Silverhand.DAL.Repository.Classes
         public GenericRepository(ApplicationDbContext context)
         {
             _context = context;
+        }
+        public async Task<IEnumerable<T>> GetWhere(Expression<Func<T, bool>> predicate)
+        {
+            return await _context.Set<T>()
+                .Where(predicate)
+                .ToListAsync();
         }
 
         public async Task<T> AddAsync(T entity)

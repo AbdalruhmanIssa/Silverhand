@@ -1,7 +1,9 @@
-﻿using Silverhand.DAL.Models;
+﻿using Silverhand.DAL.DTO.Responses;
+using Silverhand.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,6 +20,8 @@ namespace Silverhand.BLL.Services.Interface
 
         Task<TResponse?> GetByIdAsync(Guid id);
         Task<IEnumerable<TResponse>> GetAllAsync(bool withTracking = false);
+        IEnumerable<TResponse> GetWhere(Expression<Func<TEntity, bool>> predicate);
+
 
     }
-    }
+}

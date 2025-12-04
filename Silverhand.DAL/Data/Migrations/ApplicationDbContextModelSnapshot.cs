@@ -270,7 +270,7 @@ namespace Silverhand.DAL.Migrations
 
                     b.HasIndex("TitleId");
 
-                    b.ToTable("Assets");
+                    b.ToTable("Assets", (string)null);
                 });
 
             modelBuilder.Entity("Silverhand.DAL.Models.AvailabilityWindow", b =>
@@ -309,7 +309,7 @@ namespace Silverhand.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AvailabilityWindows");
+                    b.ToTable("AvailabilityWindows", (string)null);
                 });
 
             modelBuilder.Entity("Silverhand.DAL.Models.Episode", b =>
@@ -351,7 +351,7 @@ namespace Silverhand.DAL.Migrations
 
                     b.HasIndex("TitleId");
 
-                    b.ToTable("Episodes");
+                    b.ToTable("Episodes", (string)null);
                 });
 
             modelBuilder.Entity("Silverhand.DAL.Models.Favorite", b =>
@@ -375,7 +375,7 @@ namespace Silverhand.DAL.Migrations
 
                     b.HasIndex("TitleId");
 
-                    b.ToTable("Favorites");
+                    b.ToTable("Favorites", (string)null);
                 });
 
             modelBuilder.Entity("Silverhand.DAL.Models.IngestJob", b =>
@@ -421,7 +421,7 @@ namespace Silverhand.DAL.Migrations
 
                     b.HasIndex("TitleId");
 
-                    b.ToTable("IngestJobs");
+                    b.ToTable("IngestJobs", (string)null);
                 });
 
             modelBuilder.Entity("Silverhand.DAL.Models.Payment", b =>
@@ -462,7 +462,7 @@ namespace Silverhand.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Payments");
+                    b.ToTable("Payments", (string)null);
                 });
 
             modelBuilder.Entity("Silverhand.DAL.Models.Plan", b =>
@@ -509,7 +509,7 @@ namespace Silverhand.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Plans");
+                    b.ToTable("Plans", (string)null);
                 });
 
             modelBuilder.Entity("Silverhand.DAL.Models.Profile", b =>
@@ -550,7 +550,7 @@ namespace Silverhand.DAL.Migrations
 
                     b.HasIndex("UserId1");
 
-                    b.ToTable("Profiles");
+                    b.ToTable("Profiles", (string)null);
                 });
 
             modelBuilder.Entity("Silverhand.DAL.Models.Subscription", b =>
@@ -596,7 +596,7 @@ namespace Silverhand.DAL.Migrations
 
                     b.HasIndex("UserId1");
 
-                    b.ToTable("Subscriptions");
+                    b.ToTable("Subscriptions", (string)null);
                 });
 
             modelBuilder.Entity("Silverhand.DAL.Models.Subtitle", b =>
@@ -634,7 +634,7 @@ namespace Silverhand.DAL.Migrations
 
                     b.HasIndex("TitleId");
 
-                    b.ToTable("Subtitles");
+                    b.ToTable("Subtitles", (string)null);
                 });
 
             modelBuilder.Entity("Silverhand.DAL.Models.Thumbnail", b =>
@@ -671,7 +671,7 @@ namespace Silverhand.DAL.Migrations
 
                     b.HasIndex("TitleId");
 
-                    b.ToTable("Thumbnails");
+                    b.ToTable("Thumbnails", (string)null);
                 });
 
             modelBuilder.Entity("Silverhand.DAL.Models.Title", b =>
@@ -712,7 +712,7 @@ namespace Silverhand.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Titles");
+                    b.ToTable("Titles", (string)null);
                 });
 
             modelBuilder.Entity("Silverhand.DAL.Models.WatchProgress", b =>
@@ -750,7 +750,7 @@ namespace Silverhand.DAL.Migrations
 
                     b.HasIndex("TitleId");
 
-                    b.ToTable("WatchProgresses");
+                    b.ToTable("WatchProgresses", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

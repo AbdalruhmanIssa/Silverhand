@@ -23,11 +23,7 @@ namespace Silverhand.BLL.Services.Classes
 
         }
     
-    public IEnumerable<EpisodeResponse> GetWhere(Expression<Func<Episode, bool>> predicate)
-        {
-            var entities = repository.GetWhere(predicate);
-            return entities.Adapt<IEnumerable<EpisodeResponse>>();
-        }
+    
 
     }
 }

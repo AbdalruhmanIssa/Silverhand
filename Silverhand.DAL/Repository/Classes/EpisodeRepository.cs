@@ -23,12 +23,7 @@ namespace Silverhand.DAL.Repository.Classes
         }
 
         // Override GetById
-        public IEnumerable<Episode> GetWhere(Expression<Func<Episode, bool>> predicate)
-        {
-            return _context.Set<Episode>()
-                .Where(predicate)
-                .ToList();
-        }
+       
 
         public new Episode? GetById(Guid id)
         {

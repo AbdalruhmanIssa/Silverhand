@@ -17,6 +17,6 @@ namespace Silverhand.DAL.DTO.Requests
 
         // Video info
         public AssetQuality Quality { get; set; }
-        public string VideoUrl { get; set; }
+      // public string VideoUrl { get; set; }
     }
 }

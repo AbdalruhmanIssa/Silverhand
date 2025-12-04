@@ -12,6 +12,7 @@ namespace Silverhand.DAL.DTO.Requests
     {
 
         public Guid TitleId { get; set; }
+        public Guid? EpisodeId { get; set; }
         // Where the raw file is located BEFORE processing
         public IFormFile SourceUrl { get; set; } 
 
@@ -20,6 +21,8 @@ namespace Silverhand.DAL.DTO.Requests
 
         // Enum is better than string
         public IngestStatus Status { get; set; } = IngestStatus.Pending;
+        public AssetQuality Quality { get; set; }
+
 
         public DateTime? StartedAt { get; set; }
         public DateTime? CompletedAt { get; set; }

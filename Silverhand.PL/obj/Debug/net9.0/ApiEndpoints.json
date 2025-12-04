@@ -1,16 +1,6 @@
 [
   {
     "ContainingType": "Silverhand.PL.Controllers.Admin.AssetsController",
-    "Method": "GetAll",
-    "RelativePath": "api/Admin/Assets",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Admin.AssetsController",
     "Method": "Create",
     "RelativePath": "api/Admin/Assets",
     "HttpMethod": "POST",
@@ -20,22 +10,6 @@
       {
         "Name": "request",
         "Type": "Silverhand.DAL.DTO.Requests.AssetRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Admin.AssetsController",
-    "Method": "GetById",
-    "RelativePath": "api/Admin/Assets/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -56,7 +30,7 @@
       },
       {
         "Name": "request",
-        "Type": "Silverhand.DAL.DTO.Requests.AssetRequest",
+        "Type": "Silverhand.DAL.DTO.Updates.UpdateAssetRequest",
         "IsRequired": true
       }
     ],
@@ -161,6 +135,11 @@
         "IsRequired": false
       },
       {
+        "Name": "EpisodeId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
         "Name": "SourceUrl",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
@@ -172,6 +151,11 @@
       },
       {
         "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Quality",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -196,6 +180,58 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.InjestJobsController",
+    "Method": "Update",
+    "RelativePath": "api/Admin/InjestJobs/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "TitleId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "EpisodeId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "SourceUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.InjestJobsController",
+    "Method": "Delete",
+    "RelativePath": "api/Admin/InjestJobs/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -780,6 +816,32 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.AssetsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Viewer/Assets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.AssetsController",
+    "Method": "GetById",
+    "RelativePath": "api/Viewer/Assets/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

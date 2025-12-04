@@ -13,7 +13,6 @@ namespace Silverhand.BLL.Services.Interface
 {
     public interface IEpisodeService:IGenericService<EpisodeRequest,EpisodeResponse,Episode>
     {
-        IEnumerable<EpisodeResponse> GetWhere(Expression<Func<Episode, bool>> predicate);
 
     }
 }

@@ -1,11 +1,13 @@
 ﻿using Mapster;
 using Silverhand.BLL.Services.Interface;
+using Silverhand.DAL.DTO.Responses;
 using Silverhand.DAL.Models;
 using Silverhand.DAL.Repository.Classes;
 using Silverhand.DAL.Repository.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,6 +22,11 @@ namespace Silverhand.BLL.Services.Classes
         public GenericService(IGenericRepository<TEntity> repo)
         {
             _repo = repo;
+        }
+        public IEnumerable<TResponse> GetWhere(Expression<Func<TEntity, bool>> predicate)
+        {
+            var entities = _repo.GetWhere(predicate);
+            return entities.Adapt<IEnumerable<TResponse>>();
         }
 
         public async Task<TResponse> CreateAsync(TRequest request)

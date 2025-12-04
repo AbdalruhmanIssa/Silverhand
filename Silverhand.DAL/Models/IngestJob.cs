@@ -24,6 +24,7 @@ namespace Silverhand.DAL.Models
 
         public DateTime? StartedAt { get; set; }
         public DateTime? CompletedAt { get; set; }
+
     }
     public enum IngestStatus
     {

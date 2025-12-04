@@ -33,7 +33,23 @@ namespace Silverhand.PL.Controllers.Admin
             var items = await _service.GetAllAsync();
             return Ok(items);
         }
-       
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(Guid id, [FromForm] UpdateIngestJobRequest request)
+        {
+            var result = await _service.UpdateAsync(id, request);
+            return Ok(result);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var ok = await _service.DeleteAsync(id);
+
+            if (!ok)
+                return NotFound(new { message = "Ingest job not found" });
+
+            return Ok(new { message = "Ingest job deleted successfully" });
+        }
 
 
     }

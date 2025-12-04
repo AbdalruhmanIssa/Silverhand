@@ -15,7 +15,7 @@ namespace Silverhand.DAL.Repository.Repositories
     {
         new Episode? GetById(Guid id);
         new IEnumerable<Episode> GetAll(bool withTracking = false);
-        IEnumerable<Episode> GetWhere(Expression<Func<Episode, bool>> predicate);
+       
 
 
 
