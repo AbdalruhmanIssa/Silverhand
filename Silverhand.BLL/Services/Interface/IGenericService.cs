@@ -20,7 +20,7 @@ namespace Silverhand.BLL.Services.Interface
 
         Task<TResponse?> GetByIdAsync(Guid id);
         Task<IEnumerable<TResponse>> GetAllAsync(bool withTracking = false);
-        IEnumerable<TResponse> GetWhere(Expression<Func<TEntity, bool>> predicate);
+        Task<IEnumerable<TResponse>> GetWhere(Expression<Func<TEntity, bool>> predicate);
 
 
     }

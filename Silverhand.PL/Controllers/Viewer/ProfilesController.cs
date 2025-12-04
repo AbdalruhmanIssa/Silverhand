@@ -7,7 +7,7 @@ using System.Security.Claims;
 
 namespace Silverhand.PL.Controllers.Viewer
 {
-    [Route("api/[controller]")]
+    [Route("api/[area]/[controller]")]
     [ApiController]
     [Area("Viewer")]
     [Authorize(Roles = "Customer")]

@@ -11,7 +11,6 @@ namespace Silverhand.DAL.DTO.Responses
     {
         public Guid Id { get; set; }
         public Guid TitleId { get; set; }
-        public string? TitleName { get; set; }   // Navigation Property ✔️
         public int SeasonNumber { get; set; }
         public int EpisodeNumber { get; set; }
         public string Name { get; set; } = null!;

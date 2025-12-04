@@ -23,9 +23,9 @@ namespace Silverhand.BLL.Services.Classes
         {
             _repo = repo;
         }
-        public IEnumerable<TResponse> GetWhere(Expression<Func<TEntity, bool>> predicate)
+        public async Task<IEnumerable<TResponse>> GetWhere(Expression<Func<TEntity, bool>> predicate)
         {
-            var entities = _repo.GetWhere(predicate);
+            var entities =await _repo.GetWhere(predicate);
             return entities.Adapt<IEnumerable<TResponse>>();
         }
 

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Silverhand.BLL.Services.Interface;
 using Silverhand.DAL.DTO.Requests;
+using Silverhand.DAL.DTO.Responses;
 using Silverhand.DAL.Models;
 
 namespace Silverhand.PL.Controllers.Viewer
@@ -22,16 +23,36 @@ namespace Silverhand.PL.Controllers.Viewer
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] Guid titleId)
+        public async Task<IActionResult> GetAll(
+    [FromQuery] Guid titleId,
+    [FromQuery] int? seasonNumber)
         {
             if (titleId == Guid.Empty)
                 return BadRequest("titleId is required");
 
-            var episodes = _service.GetWhere(e => e.TitleId == titleId);
+            IEnumerable<EpisodeResponse> episodes;
+
+            if (seasonNumber.HasValue)
+            {
+                // filter by season
+                episodes = await _service.GetWhere(
+                    e => e.TitleId == titleId && e.SeasonNumber == seasonNumber.Value
+                );
+            }
+            else
+            {
+                // get all episodes
+                episodes = await _service.GetWhere(
+                    e => e.TitleId == titleId
+                );
+            }
+
             if (episodes == null || !episodes.Any())
-                return BadRequest("This is a movie");
+                return NotFound("No episodes found for this title/season");
+
             return Ok(episodes);
         }
+
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(Guid id)

@@ -24,7 +24,7 @@ namespace Silverhand.PL.Controllers.Viewer
         // SUBSCRIBE
         // -----------------------------------
         [HttpPost("subscribe")]
-        public async Task<IActionResult> Subscribe(SubscriptionRequest request)
+        public async Task<IActionResult> Subscribe([FromBody] SubscriptionRequest request)
         {
             var idClaim = User.FindFirstValue("Id");
             if (idClaim == null)

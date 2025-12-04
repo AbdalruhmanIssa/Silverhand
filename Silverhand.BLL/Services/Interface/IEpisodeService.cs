@@ -13,6 +13,6 @@ namespace Silverhand.BLL.Services.Interface
 {
     public interface IEpisodeService:IGenericService<EpisodeRequest,EpisodeResponse,Episode>
     {
-
+        Task<Guid> CreateAsync(EpisodeRequest request);
     }
 }

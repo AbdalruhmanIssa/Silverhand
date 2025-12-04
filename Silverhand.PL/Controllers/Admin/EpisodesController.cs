@@ -21,11 +21,23 @@ namespace Silverhand.PL.Controllers.Admin
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] EpisodeRequest request)
+        
+        public async Task<IActionResult> Create(EpisodeRequest request)
         {
-            var created = await _service.CreateAsync(request);
-            return Ok();
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            try
+            {
+                var id = await _service.CreateAsync(request);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
+
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(Guid id, [FromBody] EpisodeRequest request)

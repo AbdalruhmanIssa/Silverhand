@@ -773,52 +773,6 @@
     ]
   },
   {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.ProfilesController",
-    "Method": "Create",
-    "RelativePath": "api/Profiles",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Name",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "AvatarUrl",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "LanguagePreference",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "MaturityRating",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Theme",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.ProfilesController",
-    "Method": "GetMyProfiles",
-    "RelativePath": "api/Profiles",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "Silverhand.PL.Controllers.Viewer.AssetsController",
     "Method": "GetAll",
     "RelativePath": "api/Viewer/Assets",
@@ -887,6 +841,11 @@
       {
         "Name": "titleId",
         "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "seasonNumber",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       }
     ],
@@ -1017,6 +976,52 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.ProfilesController",
+    "Method": "Create",
+    "RelativePath": "api/Viewer/Profiles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AvatarUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "LanguagePreference",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaturityRating",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Theme",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.ProfilesController",
+    "Method": "GetMyProfiles",
+    "RelativePath": "api/Viewer/Profiles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
