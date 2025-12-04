@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.bll\\services\\classes\\ingestjobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|solutionrelative:silverhand.bll\\services\\classes\\ingestjobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.bll\\services\\classes\\thumbnailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|solutionrelative:silverhand.bll\\services\\classes\\thumbnailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.bll\\services\\classes\\assetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|solutionrelative:silverhand.bll\\services\\classes\\assetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2D05A559-39BB-47AA-80DD-B1DB489EFAA0}|Silverhand.PL\\Silverhand.PL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.pl\\controllers\\admin\\ingestjobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D05A559-39BB-47AA-80DD-B1DB489EFAA0}|Silverhand.PL\\Silverhand.PL.csproj|solutionrelative:silverhand.pl\\controllers\\admin\\ingestjobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,16 +23,8 @@
       "RelativeMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|solutionrelative:silverhand.bll\\services\\interface\\iingestjobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.bll\\services\\classes\\ingestjobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|solutionrelative:silverhand.bll\\services\\classes\\ingestjobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2D05A559-39BB-47AA-80DD-B1DB489EFAA0}|Silverhand.PL\\Silverhand.PL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.pl\\controllers\\admin\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D05A559-39BB-47AA-80DD-B1DB489EFAA0}|Silverhand.PL\\Silverhand.PL.csproj|solutionrelative:silverhand.pl\\controllers\\admin\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.bll\\services\\classes\\assetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|solutionrelative:silverhand.bll\\services\\classes\\assetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.bll\\services\\interface\\iassetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -68,10 +72,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BB38CE42-F76B-424C-80D1-83F7F76FAE50}|Silverhand.DAL\\Silverhand.DAL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.dal\\dto\\updates\\updateassetrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB38CE42-F76B-424C-80D1-83F7F76FAE50}|Silverhand.DAL\\Silverhand.DAL.csproj|solutionrelative:silverhand.dal\\dto\\updates\\updateassetrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.bll\\services\\classes\\thumbnailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|solutionrelative:silverhand.bll\\services\\classes\\thumbnailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB38CE42-F76B-424C-80D1-83F7F76FAE50}|Silverhand.DAL\\Silverhand.DAL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.dal\\dto\\updates\\updatethumbnailrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -205,7 +205,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -213,46 +213,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "AssetService.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Classes\\AssetService.cs",
               "RelativeDocumentMoniker": "Silverhand.BLL\\Services\\Classes\\AssetService.cs",
               "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Classes\\AssetService.cs",
               "RelativeToolTip": "Silverhand.BLL\\Services\\Classes\\AssetService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAqwBIAAABdAAAAAAAAAA==",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAgwEkAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T19:54:37.646Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "IngestJobService.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Classes\\IngestJobService.cs",
               "RelativeDocumentMoniker": "Silverhand.BLL\\Services\\Classes\\IngestJobService.cs",
               "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Classes\\IngestJobService.cs",
               "RelativeToolTip": "Silverhand.BLL\\Services\\Classes\\IngestJobService.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAuwHwAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAcwHwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T19:15:26.258Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IIngestJobService.cs",
-              "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Interface\\IIngestJobService.cs",
-              "RelativeDocumentMoniker": "Silverhand.BLL\\Services\\Interface\\IIngestJobService.cs",
-              "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Interface\\IIngestJobService.cs",
-              "RelativeToolTip": "Silverhand.BLL\\Services\\Interface\\IIngestJobService.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAswBIAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T20:33:20.153Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "AssetsController.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.PL\\Controllers\\Admin\\AssetsController.cs",
               "RelativeDocumentMoniker": "Silverhand.PL\\Controllers\\Admin\\AssetsController.cs",
@@ -260,12 +247,11 @@
               "RelativeToolTip": "Silverhand.PL\\Controllers\\Admin\\AssetsController.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAqwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T21:10:56.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T21:10:56.584Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "IAssetService.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Interface\\IAssetService.cs",
               "RelativeDocumentMoniker": "Silverhand.BLL\\Services\\Interface\\IAssetService.cs",
@@ -273,12 +259,11 @@
               "RelativeToolTip": "Silverhand.BLL\\Services\\Interface\\IAssetService.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAswA0AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T19:56:14.206Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T19:56:14.206Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "IngestJobsController.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.PL\\Controllers\\Admin\\IngestJobsController.cs",
               "RelativeDocumentMoniker": "Silverhand.PL\\Controllers\\Admin\\IngestJobsController.cs",
@@ -291,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AssetRequest.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.DAL\\DTO\\Requests\\AssetRequest.cs",
               "RelativeDocumentMoniker": "Silverhand.DAL\\DTO\\Requests\\AssetRequest.cs",
@@ -299,12 +284,36 @@
               "RelativeToolTip": "Silverhand.DAL\\DTO\\Requests\\AssetRequest.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T00:01:19.269Z",
+              "WhenOpened": "2025-12-04T00:01:19.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ThumbnailService.cs",
+              "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Classes\\ThumbnailService.cs",
+              "RelativeDocumentMoniker": "Silverhand.BLL\\Services\\Classes\\ThumbnailService.cs",
+              "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Classes\\ThumbnailService.cs",
+              "RelativeToolTip": "Silverhand.BLL\\Services\\Classes\\ThumbnailService.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAewGcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T23:09:35.06Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
+              "Title": "IIngestJobService.cs",
+              "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Interface\\IIngestJobService.cs",
+              "RelativeDocumentMoniker": "Silverhand.BLL\\Services\\Interface\\IIngestJobService.cs",
+              "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Interface\\IIngestJobService.cs",
+              "RelativeToolTip": "Silverhand.BLL\\Services\\Interface\\IIngestJobService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswBIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T20:33:20.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "IFileService.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Interface\\IFileService.cs",
               "RelativeDocumentMoniker": "Silverhand.BLL\\Services\\Interface\\IFileService.cs",
@@ -312,22 +321,20 @@
               "RelativeToolTip": "Silverhand.BLL\\Services\\Interface\\IFileService.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAwwA8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T22:17:41.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T22:17:41.237Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "dbo.Assets [Data]",
+              "DocumentIndex": 9,
+              "Title": "dbo.Assets.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/./Silverhand/True/SqlTable/dbo.Assets.sql",
-              "ToolTip": "dbo.Assets [Data]",
+              "ToolTip": "ViewDataWindow_MSSQL__/./Silverhand/True/SqlTable/dbo.Assets.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-12-04T00:23:42.742Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T00:23:42.742Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "AssetsController.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.PL\\Controllers\\Viewer\\AssetsController.cs",
               "RelativeDocumentMoniker": "Silverhand.PL\\Controllers\\Viewer\\AssetsController.cs",
@@ -335,12 +342,11 @@
               "RelativeToolTip": "Silverhand.PL\\Controllers\\Viewer\\AssetsController.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T21:31:36.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T21:31:36.275Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "GenericService.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Classes\\GenericService.cs",
               "RelativeDocumentMoniker": "Silverhand.BLL\\Services\\Classes\\GenericService.cs",
@@ -348,12 +354,11 @@
               "RelativeToolTip": "Silverhand.BLL\\Services\\Classes\\GenericService.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAswBkAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T20:23:12.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T20:23:12.314Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Asset.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.DAL\\Models\\Asset.cs",
               "RelativeDocumentMoniker": "Silverhand.DAL\\Models\\Asset.cs",
@@ -361,12 +366,11 @@
               "RelativeToolTip": "Silverhand.DAL\\Models\\Asset.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T21:04:19.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T21:04:19.769Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "IngestJob.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.DAL\\Models\\IngestJob.cs",
               "RelativeDocumentMoniker": "Silverhand.DAL\\Models\\IngestJob.cs",
@@ -374,12 +378,11 @@
               "RelativeToolTip": "Silverhand.DAL\\Models\\IngestJob.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T23:51:54.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T23:51:54.662Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "20251203235431_major changes with ingestjob and asset.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.DAL\\Data\\Migrations\\20251203235431_major changes with ingestjob and asset.cs",
               "RelativeDocumentMoniker": "Silverhand.DAL\\Data\\Migrations\\20251203235431_major changes with ingestjob and asset.cs",
@@ -387,12 +390,11 @@
               "RelativeToolTip": "Silverhand.DAL\\Data\\Migrations\\20251203235431_major changes with ingestjob and asset.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T23:54:32.102Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T23:54:32.102Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "IngestJobRequest.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.DAL\\DTO\\Requests\\IngestJobRequest.cs",
               "RelativeDocumentMoniker": "Silverhand.DAL\\DTO\\Requests\\IngestJobRequest.cs",
@@ -400,12 +402,11 @@
               "RelativeToolTip": "Silverhand.DAL\\DTO\\Requests\\IngestJobRequest.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwBcAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T19:19:06Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T19:19:06Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "UpdateAssetRequest.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.DAL\\DTO\\Updates\\UpdateAssetRequest.cs",
               "RelativeDocumentMoniker": "Silverhand.DAL\\DTO\\Updates\\UpdateAssetRequest.cs",
@@ -413,12 +414,11 @@
               "RelativeToolTip": "Silverhand.DAL\\DTO\\Updates\\UpdateAssetRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T21:06:22.602Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T21:06:22.602Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "AvailabilityWindowsController.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.PL\\Controllers\\Admin\\AvailabilityWindowsController.cs",
               "RelativeDocumentMoniker": "Silverhand.PL\\Controllers\\Admin\\AvailabilityWindowsController.cs",
@@ -426,21 +426,7 @@
               "RelativeToolTip": "Silverhand.PL\\Controllers\\Admin\\AvailabilityWindowsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T02:30:27.42Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ThumbnailService.cs",
-              "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Classes\\ThumbnailService.cs",
-              "RelativeDocumentMoniker": "Silverhand.BLL\\Services\\Classes\\ThumbnailService.cs",
-              "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Classes\\ThumbnailService.cs",
-              "RelativeToolTip": "Silverhand.BLL\\Services\\Classes\\ThumbnailService.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAewGcAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T23:09:35.06Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T02:30:27.42Z"
             },
             {
               "$type": "Document",
@@ -452,8 +438,7 @@
               "RelativeToolTip": "Silverhand.DAL\\Repository\\Repositories\\IEpisodeRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T21:44:51.815Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T21:44:51.815Z"
             },
             {
               "$type": "Document",
@@ -465,8 +450,7 @@
               "RelativeToolTip": "Silverhand.DAL\\DTO\\Updates\\UpdateThumbnailRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T23:08:04.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T23:08:04.196Z"
             },
             {
               "$type": "Document",
@@ -478,8 +462,7 @@
               "RelativeToolTip": "Silverhand.BLL\\Services\\Interface\\IEpisodeService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T21:40:24.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T21:40:24.545Z"
             },
             {
               "$type": "Document",
@@ -491,8 +474,7 @@
               "RelativeToolTip": "Silverhand.DAL\\Repository\\Classes\\EpisodeRepository.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAUwA4AAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T21:45:24.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T21:45:24.446Z"
             },
             {
               "$type": "Document",
@@ -504,8 +486,7 @@
               "RelativeToolTip": "Silverhand.BLL\\Services\\Interface\\ITitlesService.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAkwBQAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T22:12:33.854Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T22:12:33.854Z"
             },
             {
               "$type": "Document",
@@ -517,8 +498,7 @@
               "RelativeToolTip": "Silverhand.DAL\\DTO\\Updates\\UpdateIngestJobRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T20:11:30.783Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T20:11:30.783Z"
             },
             {
               "$type": "Document",
@@ -530,8 +510,7 @@
               "RelativeToolTip": "Silverhand.BLL\\Services\\Classes\\TitlesService.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAAAqwIcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T22:16:26.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T22:16:26.855Z"
             },
             {
               "$type": "Document",
@@ -555,8 +534,7 @@
               "RelativeToolTip": "Silverhand.PL\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-29T02:33:38.904Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T02:33:38.904Z"
             },
             {
               "$type": "Document",
@@ -568,8 +546,7 @@
               "RelativeToolTip": "Silverhand.PL\\Program.cs",
               "ViewState": "AgIAAGEAAAAAAAAAAAAQwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T02:31:33.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T02:31:33.106Z"
             },
             {
               "$type": "Document",

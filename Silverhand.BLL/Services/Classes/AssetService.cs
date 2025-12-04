@@ -71,7 +71,7 @@ namespace Silverhand.BLL.Services.Classes
                
 
                 VideoUrl = asset.VideoUrl != null
-                    ? $"{request.Scheme}://{request.Host}/vids/{asset.VideoUrl}"
+                    ? $"{request.Scheme}://{request.Host}/Vids/{asset.VideoUrl}"
                     : null
             };
         }
