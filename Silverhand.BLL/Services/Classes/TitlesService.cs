@@ -22,16 +22,16 @@ namespace Silverhand.BLL.Services.Classes
 
         private readonly ITitleRepository _repository;
         private readonly IFileService _fileService;
-        private readonly ApplicationDbContext _context;
+     
 
         public TitlesService(
             ITitleRepository repository,
-            IFileService fileService,
-            ApplicationDbContext context): base(repository)
+            IFileService fileService
+          ): base(repository)// calling base class constructor
         {
             _repository = repository;
             _fileService = fileService;
-            _context = context;
+          
         }
 
         // --------------------------
@@ -51,7 +51,7 @@ namespace Silverhand.BLL.Services.Classes
 
             // Add entity
              await _repository.AddAsync(entity);
-            await _context.SaveChangesAsync();
+          
 
             return entity.Id;
         }
@@ -67,8 +67,8 @@ namespace Silverhand.BLL.Services.Classes
             var titles = await _repository.GetAllAsync();
 
             var paged = titles
-                .Skip((pageNum - 1) * pageSize)
-                .Take(pageSize)
+                .Skip((pageNum - 1) * pageSize)// skip previous pages
+                .Take(pageSize)// take current page
                 .ToList();
 
             return paged.Select(t => new TitleResponse

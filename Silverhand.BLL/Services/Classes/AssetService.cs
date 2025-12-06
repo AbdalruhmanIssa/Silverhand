@@ -89,7 +89,7 @@ namespace Silverhand.BLL.Services.Classes
 
             return asset.Adapt<AssetResponse>();
         }
-        public async Task<AssetResponse> CreateAsync(AssetRequest request)
+        public async Task<AssetResponse> CreateAssetAsync(AssetRequest request)
         {
             // 1) Ensure title exists
             var title = await _titleRepo.GetByIdAsync(request.TitleId);
@@ -108,7 +108,7 @@ namespace Silverhand.BLL.Services.Classes
     a.EpisodeId == request.EpisodeId &&
     a.Quality == request.Quality);
 
-            if (existingAsset != null)
+            if (existingAsset.Any())
                 throw new Exception("This quality already exists for this title/episode.");
 
             // 3) Find ingest job for this title/episode
@@ -138,19 +138,7 @@ namespace Silverhand.BLL.Services.Classes
 
             return asset.Adapt<AssetResponse>();
         }
-      /*  public async Task<bool> DeleteAsync(Guid id)
-        {
-            var asset = await _repository.GetByIdAsync(id);
-            if (asset == null)
-                return false;
-
-            // Delete the video file
-            if (!string.IsNullOrEmpty(asset.VideoUrl))
-                _fileService.Delete(asset.VideoUrl);
-
-            await _repository.RemoveAsync(asset);
-            return true;
-        }*/
+      
 
     }
 }

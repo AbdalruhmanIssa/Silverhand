@@ -11,17 +11,19 @@ using System.Threading.Tasks;
 
 namespace Silverhand.DAL.Repository.Classes
 {
-    public class GenericRepository<T> : IGenericRepository<T> where T : Base
+    public class GenericRepository<T> : IGenericRepository<T> where T : Base//has base properties
     {
+        //object of dbcontext
         private readonly ApplicationDbContext _context;
-
+        //constructor injection
         public GenericRepository(ApplicationDbContext context)
         {
             _context = context;
         }
+        //method to get entities based on a condition
         public async Task<IEnumerable<T>> GetWhere(Expression<Func<T, bool>> predicate)
         {
-            return await _context.Set<T>()
+            return await _context.Set<T>()//DbSet of T
                 .Where(predicate)
                 .ToListAsync();
         }
@@ -35,10 +37,10 @@ namespace Silverhand.DAL.Repository.Classes
 
         public async Task<List<T>> GetAllAsync(bool withTracking = false)
         {
-            if (withTracking)
+            if (withTracking)//track changes
                 return await _context.Set<T>().ToListAsync();
 
-            return await _context.Set<T>().AsNoTracking().ToListAsync();
+            return await _context.Set<T>().AsNoTracking().ToListAsync();//no tracking
         }
 
         public async Task<T?> GetByIdAsync(Guid id)

@@ -235,6 +235,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.InjestJobsController",
+    "Method": "GetById",
+    "RelativePath": "api/Admin/InjestJobs/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Silverhand.PL.Controllers.Admin.PlansController",
     "Method": "Create",
     "RelativePath": "api/Admin/Plans",
@@ -282,6 +298,22 @@
       {
         "Name": "id",
         "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Admin.SubscriptionsController",
+    "Method": "Subscribe",
+    "RelativePath": "api/Admin/Subscriptions/subscribe",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Silverhand.DAL.DTO.Requests.SubscriptionRequest",
         "IsRequired": true
       }
     ],
@@ -1042,22 +1074,6 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Silverhand.PL.Controllers.Viewer.SubscriptionsController",
-    "Method": "Subscribe",
-    "RelativePath": "api/Viewer/Subscriptions/subscribe",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Silverhand.DAL.DTO.Requests.SubscriptionRequest",
-        "IsRequired": true
-      }
-    ],
     "ReturnTypes": []
   },
   {

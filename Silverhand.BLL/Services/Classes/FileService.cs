@@ -19,17 +19,17 @@ namespace Silverhand.BLL.Services.Classes
         }
         public async Task<string> UploadAsync(IFormFile file)
         {
-            if (file != null && file.Length > 0)
+            if (file != null && file.Length > 0)// check if file is not null and has content
             {
-                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);// generate unique file name
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);// combine path
 
-                using (var stream = File.Create(filePath))
+                using (var stream = File.Create(filePath))// create file stream in the specified path
                 {
-                    await file.CopyToAsync(stream);
+                    await file.CopyToAsync(stream);// copy the uploaded file to the stream asynchronously
                 }
 
-                return fileName;
+                return fileName;// return the unique file name
             }
 
             throw new Exception("error");
@@ -51,31 +51,10 @@ namespace Silverhand.BLL.Services.Classes
 
             throw new Exception("error");
         }
-        public async Task<List<string>> UploadManyAsync(List<IFormFile> files)
-        {
-            var fileNames = new List<string>();
-
-            foreach (var file in files)
-            {
-                if (file != null && file.Length > 0)
-                {
-                    var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
-
-                    using (var stream = File.Create(filePath))
-                    {
-                        await file.CopyToAsync(stream);
-                    }
-
-                    fileNames.Add(fileName);
-                }
-            }
-
-            return fileNames;
-        }
+        
         public void Delete(string fileName)
         {
-            var folderPath = Path.Combine(_env.WebRootPath, "images");
+            var folderPath = Path.Combine(_env.WebRootPath, "images");//env.WebRootPath gets the wwwroot path
             var filePath = Path.Combine(folderPath, fileName);
 
             if (File.Exists(filePath))

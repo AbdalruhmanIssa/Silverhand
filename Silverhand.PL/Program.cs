@@ -28,7 +28,7 @@ namespace Silverhand.PL
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"]));
             // Add services to the container.
-            builder.Services.AddScoped<ITitleRepository, TitleRepository>();
+            builder.Services.AddScoped<ITitleRepository, TitleRepository>();//interface to implementation
             builder.Services.AddScoped<ITitlesService, TitlesService>();
             builder.Services.AddScoped<IFileService, BLL.Services.Classes.FileService>();
             builder.Services.AddScoped<IEpisodeRepository, EpisodeRepository>();
@@ -61,7 +61,8 @@ options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"
             builder.Services.AddScoped<IAvailabilityWindowRepository, AvailabilityWindowRepository>();
             builder.Services.AddScoped<IAvailabilityWindowService, AvailabilityWindowService>();
 
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>//User entity, Role entity, bind to di
+                (options =>//identity options
             {
                 options.Password.RequiredLength = 8;
                 options.Password.RequireNonAlphanumeric = false;
@@ -70,10 +71,10 @@ options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"
                 options.Password.RequireUppercase = true;
 
                 options.User.RequireUniqueEmail = true;
-                options.SignIn.RequireConfirmedEmail = true;
+                options.SignIn.RequireConfirmedEmail = true;//email confirmation
 
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
-                options.Lockout.MaxFailedAccessAttempts = 5;
+                options.Lockout.MaxFailedAccessAttempts = 5;//5 attempts lock 1 min
             })
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();

@@ -24,7 +24,7 @@ namespace Silverhand.PL.Controllers.Admin
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] AssetRequest request)
         {
-            var result = await _service.CreateAsync(request);
+            var result = await _service.CreateAssetAsync(request);
             return Ok(result);
         }
 

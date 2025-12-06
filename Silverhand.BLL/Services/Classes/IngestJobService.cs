@@ -23,18 +23,18 @@ namespace Silverhand.BLL.Services.Classes
 
         private readonly IIngestJobRepository _repository;
         private readonly IFileService _fileService;
-        private readonly ApplicationDbContext _context;
+    
         private readonly IAssetRepository _assetRepo;
 
         public IngestJobService(
             IIngestJobRepository repository,
             IFileService fileService,
-            ApplicationDbContext context,
+          
             IAssetRepository assetRepo) : base(repository)
         {
             _repository = repository;
             _fileService = fileService;
-            _context = context;
+          
             _assetRepo = assetRepo;
         }
 
@@ -47,14 +47,16 @@ namespace Silverhand.BLL.Services.Classes
         {
             // 1) Map request → IngestJob
             var job = request.Adapt<IngestJob>();
-            
+            if (request.SourceUrl == null)
+                throw new Exception("Please upload a video file.");
 
+            
             // 2) Upload the video (IFormFile) the same way you upload images
             var videoPath = await _fileService.UploadAsyncVid(request.SourceUrl);
             job.SourceUrl = videoPath; // link to uploaded file
 
             // 3) Create Asset for playback
-            var asset = new Asset
+            var asset = new Asset// bind asset to this ingest job
             {
                 TitleId = request.TitleId,
                 EpisodeId = request.EpisodeId,
@@ -122,7 +124,7 @@ namespace Silverhand.BLL.Services.Classes
             return job.Adapt<IngestJobResponse>();
         }
 
-        public async Task<bool> DeleteAsync(Guid id)
+        public async Task<bool> DeleteIngestJobAsync(Guid id)
         {
             var job = await _repository.GetByIdAsync(id);
             if (job == null)
@@ -152,6 +154,22 @@ namespace Silverhand.BLL.Services.Classes
             return true;
         }
 
+        public async Task<IngestJobResponse> GetByIdAsyncIngestJob(Guid id)
+        {
+            var job = await _repository.GetByIdAsync(id);
+            if (job == null)
+                throw new Exception("Ingest job not found");
+
+            // get related assets
+            var assets = await _assetRepo.GetWhere(a =>
+                a.TitleId == job.TitleId &&
+                a.EpisodeId == job.EpisodeId);
+
+            var response = job.Adapt<IngestJobResponse>();
+            response.Assets = assets.Adapt<List<AssetResponse>>();
+
+            return response;
+        }
 
 
 

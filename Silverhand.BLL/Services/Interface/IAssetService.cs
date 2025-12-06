@@ -16,5 +16,6 @@ namespace Silverhand.BLL.Services.Interface
         Task<List<AssetResponse>> GetAllAsync(HttpRequest request);
         Task<AssetResponse> GetByIdAsync(Guid id, HttpRequest request);
         Task<AssetResponse> UpdateAsync(Guid id, UpdateAssetRequest request);
+        Task<AssetResponse> CreateAssetAsync(AssetRequest request);
     }
 }

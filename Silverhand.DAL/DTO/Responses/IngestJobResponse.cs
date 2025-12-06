@@ -23,6 +23,7 @@ namespace Silverhand.DAL.DTO.Responses
 
         // Enum is better than string
         public IngestStatus Status { get; set; } = IngestStatus.Pending;
+        public List<AssetResponse> Assets { get; set; }
 
         public DateTime? StartedAt { get; set; }
         public DateTime? CompletedAt { get; set; }

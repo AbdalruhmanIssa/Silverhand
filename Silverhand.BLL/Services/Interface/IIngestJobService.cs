@@ -16,6 +16,8 @@ namespace Silverhand.BLL.Services.Interface
     {
         Task<Guid> CreateFile(IngestJobRequest request);
         Task<IngestJobResponse> UpdateAsync(Guid id, UpdateIngestJobRequest request);
-        Task<bool> DeleteAsync(Guid id);
+        Task<bool> DeleteIngestJobAsync(Guid id);
+         Task<IngestJobResponse> GetByIdAsyncIngestJob(Guid id);
+
     }
 }

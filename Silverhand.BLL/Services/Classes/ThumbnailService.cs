@@ -56,7 +56,7 @@ namespace Silverhand.BLL.Services.Classes
             }
 
             await _repository.AddAsync(entity);
-            await _context.SaveChangesAsync();
+           
 
             return entity.Id;
         }

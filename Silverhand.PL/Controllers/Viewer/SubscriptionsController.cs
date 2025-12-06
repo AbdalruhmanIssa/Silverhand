@@ -23,18 +23,7 @@ namespace Silverhand.PL.Controllers.Viewer
         // -----------------------------------
         // SUBSCRIBE
         // -----------------------------------
-        [HttpPost("subscribe")]
-        public async Task<IActionResult> Subscribe([FromBody] SubscriptionRequest request)
-        {
-            var idClaim = User.FindFirstValue("Id");
-            if (idClaim == null)
-                return Unauthorized("User ID missing in token.");
-
-            var userId = Guid.Parse(idClaim);
-
-            var result = await _subscriptionService.SubscribeAsync(userId, request);
-            return Ok(result);
-        }
+       
 
         // -----------------------------------
         // CANCEL SUBSCRIPTION

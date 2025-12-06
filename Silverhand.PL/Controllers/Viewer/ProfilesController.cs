@@ -25,7 +25,7 @@ namespace Silverhand.PL.Controllers.Viewer
         [Consumes("multipart/form-data")]
         public async Task<IActionResult> Create([FromForm] ProfileRequest request)
         {
-            var idClaim = User.FindFirstValue("Id");
+            var idClaim = User.FindFirstValue("Id");//extracting the claim named "Id"
 
             if (idClaim == null)
                 return Unauthorized("User ID missing in token.");

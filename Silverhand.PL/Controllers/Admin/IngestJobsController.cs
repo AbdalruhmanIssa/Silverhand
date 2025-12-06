@@ -43,7 +43,7 @@ namespace Silverhand.PL.Controllers.Admin
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            var ok = await _service.DeleteAsync(id);
+            var ok = await _service.DeleteIngestJobAsync(id);
 
             if (!ok)
                 return NotFound(new { message = "Ingest job not found" });
@@ -51,6 +51,12 @@ namespace Silverhand.PL.Controllers.Admin
             return Ok(new { message = "Ingest job deleted successfully" });
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(Guid id)
+        {
+            var result = await _service.GetByIdAsyncIngestJob(id);
+            return Ok(result);
+        }
 
     }
 }

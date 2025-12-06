@@ -29,7 +29,7 @@ namespace Silverhand.DAL.Repository.Classes
             return await _userManager.FindByIdAsync(userId);
         }
 
-        public async Task<bool> BlockUserAsync(string userId, int days)
+        public async Task<bool> BlockUserAsync(string userId, int days)//block for certain days, uses LockoutEnd
         {
             var user = await _userManager.FindByIdAsync(userId);
             if (user is null) return false;

@@ -35,7 +35,7 @@ namespace Silverhand.BLL.Services.Classes
             Guid userId,
             HttpRequest httpRequest)
         {
-            var plan = await _planRepo.GetByIdAsync(request.PlanId);
+            var plan = await _planRepo.GetByIdAsync(request.PlanId);//fetch plan details
             if (plan == null || !plan.IsActive)
             {
                 return new PaymentResponse { Success = false, Message = "Plan not found." };
@@ -46,7 +46,7 @@ namespace Silverhand.BLL.Services.Classes
                 Id = Guid.NewGuid(),
                 UserId = userId,
                 PlanId = plan.Id,
-                Status = SubscriptionStatus.Trialing,
+                Status = SubscriptionStatus.Trialing,//initial status
                 PeriodStartUtc = DateTime.UtcNow,
                 PeriodEndUtc = DateTime.UtcNow,
                 CreatedAt = DateTime.UtcNow,
@@ -75,14 +75,14 @@ namespace Silverhand.BLL.Services.Classes
                             Name = plan.Name,
                             Description = $"Subscription - {plan.Interval}"
                         },
-                        UnitAmount = (long)(plan.Price * 100)
+                        UnitAmount = (long)(plan.Price * 100)//amount in cents
                     },
                     Quantity = 1
                 }
             }
             };
 
-            var sessionService = new SessionService();
+            var sessionService = new SessionService();//checkout session creation
             var session = await sessionService.CreateAsync(options);
 
             var payment = new Payment
@@ -120,7 +120,7 @@ namespace Silverhand.BLL.Services.Classes
             var plan = await _planRepo.GetByIdAsync(subscription.PlanId);
             if (plan == null) return false;
 
-            subscription.Status = SubscriptionStatus.Active;
+            subscription.Status = SubscriptionStatus.Active;//activate subscription
             subscription.PeriodStartUtc = DateTime.UtcNow;
             subscription.PeriodEndUtc = plan.Interval == BillingInterval.Monthly
     ? DateTime.UtcNow.AddMonths(1)

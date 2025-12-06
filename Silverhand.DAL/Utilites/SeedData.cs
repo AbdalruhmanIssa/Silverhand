@@ -27,7 +27,7 @@ namespace Silverhand.DAL.Utilites
             _userManager = userManager;
         }
 
-        public async Task DataSeeding()
+        public async Task DataSeeding()// migrate and seed
         {
             if ((await _context.Database.GetPendingMigrationsAsync()).Any())
             {

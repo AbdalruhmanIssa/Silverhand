@@ -8,11 +8,11 @@ namespace Silverhand.PL.Uti
     {
         public Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
-            var client = new SmtpClient("smtp.gmail.com", 587)
+            var client = new SmtpClient("smtp.gmail.com", 587)//port number
             {
-                EnableSsl = true,
-                UseDefaultCredentials = false,
-                Credentials = new NetworkCredential("aboody9068@gmail.com", "pzvp ysdc htga gkcd")
+                EnableSsl = true, //encreption
+                UseDefaultCredentials = false,//custom credintials
+                Credentials = new NetworkCredential("aboody9068@gmail.com", "pzvp ysdc htga gkcd")//app password
             };
 
             return client.SendMailAsync(

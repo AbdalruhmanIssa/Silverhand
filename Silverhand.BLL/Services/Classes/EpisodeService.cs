@@ -21,11 +21,11 @@ namespace Silverhand.BLL.Services.Classes
     {
         private readonly IEpisodeRepository repository;
         private readonly ITitleRepository _titleRepository;
-        private readonly ApplicationDbContext _context;
-        public EpisodeService(IEpisodeRepository repository,ITitleRepository titleRepository,ApplicationDbContext context) : base(repository) {
+        
+        public EpisodeService(IEpisodeRepository repository,ITitleRepository titleRepository) : base(repository) {
             this.repository = repository;
             _titleRepository = titleRepository;
-               _context = context;
+             
 
 
         }
@@ -59,7 +59,7 @@ namespace Silverhand.BLL.Services.Classes
             entity.CreatedAt = DateTime.UtcNow;
 
             await repository.AddAsync(entity);
-            await _context.SaveChangesAsync();
+            
 
             return entity.Id;
         }

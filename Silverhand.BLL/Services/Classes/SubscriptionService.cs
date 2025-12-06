@@ -90,7 +90,7 @@ namespace Silverhand.BLL.Services.Classes
             if (sub == null)
                 return null;
 
-            var plan = sub.Plan; // Make sure EF loads Plan if needed
+            var plan = sub.Plan ?? await _planRepo.GetByIdAsync(sub.PlanId); // Make sure EF loads Plan if needed
 
             return new SubscriptionResponse
             {

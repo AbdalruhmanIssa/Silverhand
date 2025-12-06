@@ -31,7 +31,7 @@ namespace Silverhand.BLL.Services.Classes
             foreach (var user in users)
             {
                 var role = await _userManager.GetRolesAsync(user);
-                userDtos.Add(new UserDTO
+                userDtos.Add(new UserDTO //map to UserDTO, not using Mapster here because of role fetching
                 {
                     Id = user.Id,
                     FullName = user.FullName,

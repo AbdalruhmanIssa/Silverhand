@@ -18,10 +18,10 @@ namespace Silverhand.BLL.Services.Classes
 {
     public class AuthenticationService : IAuthenticationService
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly IConfiguration _configuration;
-        private readonly IEmailSender _emailSender;
-        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;//crud db for users
+        private readonly IConfiguration _configuration;//jwt
+        private readonly IEmailSender _emailSender;//send email
+        private readonly SignInManager<ApplicationUser> _signInManager;//signin users, validate password, logic, security
 
         public AuthenticationService(
             UserManager<ApplicationUser> userManager,
@@ -43,7 +43,7 @@ namespace Silverhand.BLL.Services.Classes
 
             var result = await _signInManager.CheckPasswordSignInAsync(user, loginRequest.Password, true);
 
-            if (result.Succeeded)
+            if (result.Succeeded)//inside signinmanager
             {
                 return new UserResponse
                 {
@@ -90,11 +90,11 @@ namespace Silverhand.BLL.Services.Classes
             if (result.Succeeded)
             {
                 var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                var escape = Uri.EscapeDataString(token);
-
+                var escape = Uri.EscapeDataString(token);//repmove special chars
+                //build url
                 var emailUrl =
                     $"{request.Scheme}://{request.Host}/api/Identity/Account/ConfirmEmail?token={escape}&userId={user.Id}";
-
+                
                 await _userManager.AddToRoleAsync(user, "Customer");
 
                 await _emailSender.SendEmailAsync(
@@ -115,30 +115,32 @@ namespace Silverhand.BLL.Services.Classes
 
         private async Task<string> CreateTokenAsync(ApplicationUser applicationUser)
         {
+            // Create claims, which are pieces of information about the user
             var claims = new List<Claim>
             {
                 new Claim("Name", applicationUser.UserName ?? ""),
                 new Claim("Email", applicationUser.Email ?? ""),
                 new Claim("Id", applicationUser.Id),
             };
-
+            // Add roles as claims
             var roles = await _userManager.GetRolesAsync(applicationUser);
             foreach (var role in roles)
             {
+                
                 claims.Add(new Claim("Role", role));
             }
-
+            // Create the security key, which will be used to sign the token, using the secret from configuration
             var securityKey = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(_configuration["jwtOptions:SecretKey"]));
-
+            // Create signing credentials using the security key and a hashing algorithm
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-
+            // Create the JWT token with claims, expiration, and signing credentials
             var token = new JwtSecurityToken(
                 claims: claims,
                 expires: DateTime.UtcNow.AddDays(15),
                 signingCredentials: credentials
             );
-
+            // Return the serialized token as a string
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
