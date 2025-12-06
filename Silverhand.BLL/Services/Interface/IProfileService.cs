@@ -12,6 +12,8 @@ namespace Silverhand.BLL.Services.Interface
     {
         Task<ProfileResponse> CreateProfileAsync(Guid userId, ProfileRequest request);
         Task<IEnumerable<ProfileResponse>> GetAllByUserAsync(Guid userId);
+        Task<bool> DeleteAsync(Guid profileId, Guid userId);
+        Task<ProfileResponse?> UpdateAsync(Guid profileId, ProfileRequest request, Guid userId);
 
     }
 }

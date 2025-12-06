@@ -1057,6 +1057,63 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.ProfilesController",
+    "Method": "Update",
+    "RelativePath": "api/Viewer/Profiles/{profileId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "profileId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AvatarUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "LanguagePreference",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaturityRating",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Theme",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.ProfilesController",
+    "Method": "Delete",
+    "RelativePath": "api/Viewer/Profiles/{profileId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "profileId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Silverhand.PL.Controllers.Viewer.SubscriptionsController",
     "Method": "Cancel",
     "RelativePath": "api/Viewer/Subscriptions/cancel",

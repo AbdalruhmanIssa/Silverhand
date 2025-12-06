@@ -18,6 +18,11 @@ namespace Silverhand.DAL.Repository.Classes
         {
             _userManager = userManager;
         }
+        public async Task<bool> UserExistsAsync(Guid userId)
+        {
+            return await _userManager.Users
+                .AnyAsync(u => u.Id == userId.ToString());
+        }
 
         public async Task<List<ApplicationUser>> GetAllAsync()
         {

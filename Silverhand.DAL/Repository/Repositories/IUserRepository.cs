@@ -15,5 +15,10 @@ namespace Silverhand.DAL.Repository.Repositories
         Task<bool> UnBlockUserAsync(string userId);
         Task<bool> IsBlockedAsync(string userId);
         Task<bool> ChangeUserRoleAsync(string userId, string roleName);
+
+        Task<bool> UserExistsAsync(Guid userId);
+
+
+
     }
 }

@@ -20,17 +20,17 @@ namespace Silverhand.PL.Controllers.Viewer
         {
             _profileService = profileService;
         }
+        private Guid GetUserId()
+        {
+            var id = User.FindFirstValue("Id");
+            return Guid.Parse(id);
+        }
 
         [HttpPost]
         [Consumes("multipart/form-data")]
         public async Task<IActionResult> Create([FromForm] ProfileRequest request)
         {
-            var idClaim = User.FindFirstValue("Id");//extracting the claim named "Id"
-
-            if (idClaim == null)
-                return Unauthorized("User ID missing in token.");
-
-            var userId = Guid.Parse(idClaim);
+            var userId = GetUserId();
 
             var result = await _profileService.CreateProfileAsync(userId, request);
             return Ok(result);
@@ -39,15 +39,33 @@ namespace Silverhand.PL.Controllers.Viewer
         [HttpGet]
         public async Task<IActionResult> GetMyProfiles()
         {
-            var idClaim = User.FindFirstValue("Id");   // <-- same claim we fixed
-            if (idClaim == null)
-                return Unauthorized("User ID missing from token.");
-
-            var userId = Guid.Parse(idClaim);
+            var userId = GetUserId();
 
             var profiles = await _profileService.GetAllByUserAsync(userId);
 
             return Ok(profiles);
+        }
+        // UPDATE ---------------------------------------
+        [HttpPut("{profileId}")]
+        public async Task<IActionResult> Update(Guid profileId, [FromForm] ProfileRequest request)
+        {
+            var userId = GetUserId();
+
+            var updated = await _profileService.UpdateAsync(profileId, request, userId);
+            return Ok(updated);
+        }
+
+        // DELETE ---------------------------------------
+        [HttpDelete("{profileId}")]
+        public async Task<IActionResult> Delete(Guid profileId)
+        {
+            var userId = GetUserId();
+
+            var result = await _profileService.DeleteAsync(profileId, userId);
+            if (!result)
+                return NotFound("Profile not found.");
+
+            return Ok("Profile deleted successfully.");
         }
 
     }

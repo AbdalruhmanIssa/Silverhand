@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.bll\\services\\classes\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|solutionrelative:silverhand.bll\\services\\classes\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB38CE42-F76B-424C-80D1-83F7F76FAE50}|Silverhand.DAL\\Silverhand.DAL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.dal\\repository\\classes\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB38CE42-F76B-424C-80D1-83F7F76FAE50}|Silverhand.DAL\\Silverhand.DAL.csproj|solutionrelative:silverhand.dal\\repository\\classes\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D05A559-39BB-47AA-80DD-B1DB489EFAA0}|Silverhand.PL\\Silverhand.PL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.pl\\controllers\\viewer\\profilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D05A559-39BB-47AA-80DD-B1DB489EFAA0}|Silverhand.PL\\Silverhand.PL.csproj|solutionrelative:silverhand.pl\\controllers\\viewer\\profilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.bll\\services\\interface\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|solutionrelative:silverhand.bll\\services\\interface\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.bll\\services\\classes\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|solutionrelative:silverhand.bll\\services\\classes\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D05A559-39BB-47AA-80DD-B1DB489EFAA0}|Silverhand.PL\\Silverhand.PL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.pl\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2D05A559-39BB-47AA-80DD-B1DB489EFAA0}|Silverhand.PL\\Silverhand.PL.csproj|solutionrelative:silverhand.pl\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB38CE42-F76B-424C-80D1-83F7F76FAE50}|Silverhand.DAL\\Silverhand.DAL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.dal\\dto\\requests\\profilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB38CE42-F76B-424C-80D1-83F7F76FAE50}|Silverhand.DAL\\Silverhand.DAL.csproj|solutionrelative:silverhand.dal\\dto\\requests\\profilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D05A559-39BB-47AA-80DD-B1DB489EFAA0}|Silverhand.PL\\Silverhand.PL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,20 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PaymentService.cs",
-              "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Classes\\PaymentService.cs",
-              "RelativeDocumentMoniker": "Silverhand.BLL\\Services\\Classes\\PaymentService.cs",
-              "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Classes\\PaymentService.cs*",
-              "RelativeToolTip": "Silverhand.BLL\\Services\\Classes\\PaymentService.cs*",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAgwHoAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T02:45:17.688Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
@@ -45,14 +52,74 @@
               "RelativeDocumentMoniker": "Silverhand.PL\\Controllers\\Viewer\\ProfilesController.cs",
               "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.PL\\Controllers\\Viewer\\ProfilesController.cs",
               "RelativeToolTip": "Silverhand.PL\\Controllers\\Viewer\\ProfilesController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwBsAAABVAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAACAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T02:42:31.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-06T04:18:34.121Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "IProfileService.cs",
+              "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Interface\\IProfileService.cs",
+              "RelativeDocumentMoniker": "Silverhand.BLL\\Services\\Interface\\IProfileService.cs",
+              "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Interface\\IProfileService.cs",
+              "RelativeToolTip": "Silverhand.BLL\\Services\\Interface\\IProfileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T04:17:02.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProfileRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.DAL\\DTO\\Requests\\ProfileRequest.cs",
+              "RelativeDocumentMoniker": "Silverhand.DAL\\DTO\\Requests\\ProfileRequest.cs",
+              "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.DAL\\DTO\\Requests\\ProfileRequest.cs",
+              "RelativeToolTip": "Silverhand.DAL\\DTO\\Requests\\ProfileRequest.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T04:16:18.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProfileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.DAL\\Repository\\Classes\\ProfileRepository.cs",
+              "RelativeDocumentMoniker": "Silverhand.DAL\\Repository\\Classes\\ProfileRepository.cs",
+              "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.DAL\\Repository\\Classes\\ProfileRepository.cs",
+              "RelativeToolTip": "Silverhand.DAL\\Repository\\Classes\\ProfileRepository.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAkwDcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T04:13:27.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.PL\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Silverhand.PL\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.PL\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Silverhand.PL\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-06T04:09:28.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProfileService.cs",
+              "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Classes\\ProfileService.cs",
+              "RelativeDocumentMoniker": "Silverhand.BLL\\Services\\Classes\\ProfileService.cs",
+              "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Classes\\ProfileService.cs",
+              "RelativeToolTip": "Silverhand.BLL\\Services\\Classes\\ProfileService.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAA0wEgAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T04:07:47.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.PL\\Program.cs",
               "RelativeDocumentMoniker": "Silverhand.PL\\Program.cs",
@@ -60,12 +127,7 @@
               "RelativeToolTip": "Silverhand.PL\\Program.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAQwEAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T22:31:45.042Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2025-12-05T22:31:45.042Z"
             }
           ]
         }

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Silverhand.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bb4da813c14888ef6468d4668e202dbb3b85893")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0fed35c473c4a7ae51a3634e2ef1aebc9c60d026")]
 [assembly: System.Reflection.AssemblyProductAttribute("Silverhand.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Silverhand.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
