@@ -11,5 +11,6 @@ namespace Silverhand.BLL.Services.Interface
 {
     public interface ISubtitleService : IGenericService<SubtitleRequest,SubtitleResponse,Subtitle>
     {
+        Task<List<SubtitleResponse>> GetAllAsync(Guid titleId, Guid? episodeId);
     }
 }

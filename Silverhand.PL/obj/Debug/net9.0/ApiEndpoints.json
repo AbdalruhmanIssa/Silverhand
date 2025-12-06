@@ -1134,6 +1134,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Silverhand.PL.Controllers.Viewer.SubtitlesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Viewer/Subtitles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "titleId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "episodeId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Silverhand.PL.Controllers.Viewer.ThumbnailsController",
     "Method": "GetAll",
     "RelativePath": "api/Viewer/Thumbnails",
