@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2D05A559-39BB-47AA-80DD-B1DB489EFAA0}|Silverhand.PL\\Silverhand.PL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.pl\\controllers\\viewer\\subtitlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D05A559-39BB-47AA-80DD-B1DB489EFAA0}|Silverhand.PL\\Silverhand.PL.csproj|solutionrelative:silverhand.pl\\controllers\\viewer\\subtitlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.bll\\services\\classes\\subtitleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|solutionrelative:silverhand.bll\\services\\classes\\subtitleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.bll\\services\\interface\\isubtitleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{518ABEB5-BAAF-4985-96C6-DE1E26C4668C}|Silverhand.BLL\\Silverhand.BLL.csproj|solutionrelative:silverhand.bll\\services\\interface\\isubtitleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D05A559-39BB-47AA-80DD-B1DB489EFAA0}|Silverhand.PL\\Silverhand.PL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.pl\\silverhand.pl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2D05A559-39BB-47AA-80DD-B1DB489EFAA0}|Silverhand.PL\\Silverhand.PL.csproj|solutionrelative:silverhand.pl\\silverhand.pl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D05A559-39BB-47AA-80DD-B1DB489EFAA0}|Silverhand.PL\\Silverhand.PL.csproj|c:\\users\\abood\\desktop\\backend\\the project\\silverhand\\silverhand.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,51 +21,25 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ISubtitleService.cs",
-              "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Interface\\ISubtitleService.cs",
-              "RelativeDocumentMoniker": "Silverhand.BLL\\Services\\Interface\\ISubtitleService.cs",
-              "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Interface\\ISubtitleService.cs*",
-              "RelativeToolTip": "Silverhand.BLL\\Services\\Interface\\ISubtitleService.cs*",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAowA0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T04:41:52.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SubtitlesController.cs",
-              "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.PL\\Controllers\\Viewer\\SubtitlesController.cs",
-              "RelativeDocumentMoniker": "Silverhand.PL\\Controllers\\Viewer\\SubtitlesController.cs",
-              "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.PL\\Controllers\\Viewer\\SubtitlesController.cs*",
-              "RelativeToolTip": "Silverhand.PL\\Controllers\\Viewer\\SubtitlesController.cs*",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAqwBgAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T04:41:14.132Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SubtitleService.cs",
-              "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Classes\\SubtitleService.cs",
-              "RelativeDocumentMoniker": "Silverhand.BLL\\Services\\Classes\\SubtitleService.cs",
-              "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.BLL\\Services\\Classes\\SubtitleService.cs*",
-              "RelativeToolTip": "Silverhand.BLL\\Services\\Classes\\SubtitleService.cs*",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAmwBwAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T04:37:19.106Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "Silverhand.PL.csproj",
+              "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.PL\\Silverhand.PL.csproj",
+              "RelativeDocumentMoniker": "Silverhand.PL\\Silverhand.PL.csproj",
+              "ToolTip": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.PL\\Silverhand.PL.csproj",
+              "RelativeToolTip": "Silverhand.PL\\Silverhand.PL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-08T15:52:48.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Abood\\Desktop\\Backend\\The Project\\Silverhand\\Silverhand.PL\\Program.cs",
               "RelativeDocumentMoniker": "Silverhand.PL\\Program.cs",
@@ -81,8 +47,7 @@
               "RelativeToolTip": "Silverhand.PL\\Program.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAQwEAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T22:31:45.042Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T22:31:45.042Z"
             }
           ]
         }
