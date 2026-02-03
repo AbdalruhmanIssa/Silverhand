@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Silverhand.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0488a01af16f599c65b879e75a3ea3a97e291b7c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+edce08c80603a500782332dc120c371c42db1081")]
 [assembly: System.Reflection.AssemblyProductAttribute("Silverhand.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Silverhand.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
